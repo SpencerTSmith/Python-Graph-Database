@@ -1,10 +1,63 @@
+Graph before commands: 
+{'A': {'D', 'C', 'B'},
+ 'B': {'D', 'F', 'E'},
+ 'C': {'F', 'G', 'H'},
+ 'D': {'J', 'H'},
+ 'E': {'K', 'I'},
+ 'F': {'J', 'L'},
+ 'G': {'M', 'K'},
+ 'H': {'L', 'N'},
+ 'I': {'O', 'M'},
+ 'J': {'P', 'N'},
+ 'K': {'O', 'Q'},
+ 'L': {'P'},
+ 'M': {'Q'},
+ 'N': {'R'},
+ 'O': {'S'},
+ 'P': {'T'},
+ 'Q': set(),
+ 'R': set(),
+ 'S': set(),
+ 'T': set()}
 add-vertex Z : success
+add-vertex A : fail
 add-vertex U : success
+add-vertex Q : fail
 add-edge U Z : success
 add-edge Z U : success
-has-vertex A : success
-has-vertex B : success
-has-edge A B : success
-has-edge B U : fail
+has-vertex A : True
+has-vertex B : True
+has-edge A B : True
+has-edge B U : False
 remove-edge U Z : success
+remove-edge A B : success
+has-edge A B : False
 remove-vertex Z : success
+remove-vertex Z : fail
+get-neighborhood A : ['D', 'C']
+get-neighborhood U : []
+get-shortest-path A : ['A', 'C', 'G'] in  0.000006 seconds
+get-shortest-path U : None in  0.000001 seconds
+
+Graph after commands: 
+{'A': {'D', 'C'},
+ 'B': {'D', 'F', 'E'},
+ 'C': {'F', 'G', 'H'},
+ 'D': {'J', 'H'},
+ 'E': {'K', 'I'},
+ 'F': {'J', 'L'},
+ 'G': {'M', 'K'},
+ 'H': {'L', 'N'},
+ 'I': {'O', 'M'},
+ 'J': {'P', 'N'},
+ 'K': {'O', 'Q'},
+ 'L': {'P'},
+ 'M': {'Q'},
+ 'N': {'R'},
+ 'O': {'S'},
+ 'P': {'T'},
+ 'Q': set(),
+ 'R': set(),
+ 'S': set(),
+ 'T': set(),
+ 'U': set()}

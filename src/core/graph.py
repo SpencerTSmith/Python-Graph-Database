@@ -48,7 +48,7 @@ class Graph:
 
     def get_neighbors(self, v: str) -> Optional[Set[str]]:
         with self._lock:
-            return self._vertices.get(v, None)
+            return self._vertices.get(v)
 
     def get_all_vertices(self) -> Set[str]:
         with self._lock:

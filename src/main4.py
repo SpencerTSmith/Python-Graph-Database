@@ -2,8 +2,8 @@
 from src.core.graph import Graph
 from src.core.operations import GraphOperations
 import os
-import networkx as nx
-import matplotlib.pyplot as plt
+# import networkx as nx
+# import matplotlib.pyplot as plt
 
 def read_graph_from_file(filename: str) -> Graph:
     graph = Graph()
@@ -26,13 +26,6 @@ def main():
     ops = GraphOperations(graph)
 
     ops.execute_commands(command_path, output_path)
-
-
-
-
-
-
-
 
 if __name__ == "__main__":
     main()

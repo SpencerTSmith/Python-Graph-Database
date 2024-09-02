@@ -3,6 +3,7 @@ from src.algorithms import path_finding
 from typing import Tuple, List, Optional
 import time
 from enum import StrEnum
+from pprint import pprint
 
 
 class Commands(StrEnum):
@@ -12,12 +13,12 @@ class Commands(StrEnum):
     REM_EDGE = "remove-edge"
     HAS_VERT = "has-vertex"
     HAS_EDGE = "has-edge"
-    GET_HOOD = "get-neighbors"
+    GET_HOOD = "get-neighborhood"
     GET_SSSP = "get-shortest-path"
 
 class GraphOperations:
-    def __init__(self, graph: Graph):
-        self.graph = graph
+    def __init__(self, _graph: Graph):
+        self.graph = _graph
 
     def add_vertex(self, v: str) -> bool:
         return self.graph.add_vertex(v)
@@ -52,39 +53,42 @@ class GraphOperations:
         end_time = time.time()
         return path, end_time - start_time
 
+    # TODO(spencer): Needs nicer error checking and handling probably
     def execute_commands(self, command_file: str, output_file: str):
         with open(command_file, 'r') as commands, open(output_file, 'w') as output:
+            output.write("Graph before commands:\n")
+            # pretty print looks better than str()
+            pprint(self.graph._vertices, stream = output)
+
             for line in commands:
                 tokens = line.strip().split(' ')
 
                 match tokens[0]:
                     # NOTE(spencer): What do you all think? Is this readable? We may want to create a formatting function to make this prettier.
                     case Commands.ADD_VERT:
-                        result = self.graph.add_vertex(tokens[1])
-                        output.write(Commands.ADD_VERT + ' ' + tokens[1] + ' : ' + ( 'success' if result else 'fail' ) + '\n')
+                        result = self.add_vertex(tokens[1])
+                        output.write(f'{Commands.ADD_VERT} {tokens[1]} : {( 'success' if result else 'fail' )}\n')
                     case Commands.ADD_EDGE:
-                        result = self.graph.add_edge(tokens[1], tokens[2])
-                        output.write(Commands.ADD_EDGE + ' ' + tokens[1] + ' ' + tokens[2] + ' : ' + ( 'success' if result else 'fail' ) + '\n')
+                        result = self.add_edge(tokens[1], tokens[2])
+                        output.write(f'{Commands.ADD_EDGE} {tokens[1]} {tokens[2]} : {( 'success' if result else 'fail' )}\n')
                     case Commands.REM_VERT:
-                        result = self.graph.remove_vertex(tokens[1])
-                        output.write(Commands.REM_VERT + ' ' + tokens[1] + ' : ' + ( 'success' if result else 'fail' ) + '\n')
+                        result = self.remove_vertex(tokens[1])
+                        output.write(f'{Commands.REM_VERT} {tokens[1]} : {( 'success' if result else 'fail' )}\n')
                     case Commands.REM_EDGE:
-                        result = self.graph.remove_edge(tokens[1], tokens[2])
-                        output.write(Commands.REM_EDGE + ' ' + tokens[1] + ' ' + tokens[2] + ' : ' + ( 'success' if result else 'fail' ) + '\n')
+                        result = self.remove_edge(tokens[1], tokens[2])
+                        output.write(f'{Commands.REM_EDGE} {tokens[1]} {tokens[2]} : {( 'success' if result else 'fail' )}\n')
                     case Commands.HAS_VERT:
-                        result = self.graph.has_vertex(tokens[1])
-                        output.write(Commands.HAS_VERT + ' ' + tokens[1] +  ' : ' + ( 'success' if result else 'fail' ) + '\n')
+                        result = self.has_vertex(tokens[1])
+                        output.write(f'{Commands.HAS_VERT} {tokens[1]} : {str(result)}\n')
                     case Commands.HAS_EDGE:
-                        result = self.graph.has_edge(tokens[1], tokens[2])
-                        output.write(Commands.HAS_EDGE + ' ' + tokens[1] + ' ' + tokens[2] + ' : ' + ( 'success' if result else 'fail' ) + '\n')
+                        result = self.has_edge(tokens[1], tokens[2])
+                        output.write(f'{Commands.HAS_EDGE} {tokens[1]} {tokens[2]} : {str(result)}\n')
                     case Commands.GET_HOOD:
-                        self.graph.get_neighbors(tokens[1])
+                        neighborhood = self.get_neighbors(tokens[1])
+                        output.write(f'{Commands.GET_HOOD} {tokens[1]} : {str(neighborhood)}\n')
                     case Commands.GET_SSSP:
-                        self.get_shortest_path(tokens[1], tokens[2])
+                        path, time = self.get_shortest_path(tokens[1], tokens[2])
+                        output.write(f'{Commands.GET_SSSP} {tokens[1]} : {str(path)} in {time: .6f} seconds\n')
 
-
-
-
-
-
-
+            output.write("\nGraph after commands:\n")
+            pprint(self.graph._vertices, stream = output)
