@@ -7,8 +7,3 @@ I have added threaded loading of graph from file, but it is actually slower, ove
 "samplegraph2.txt" is 8000 edges long and it is still too small to see any benefit from threading.
 
 GLI is very unfortunate because now we need to do deal with communication overhead between processes.
-
-## Will our graphs contain loops?
-If so, we can't use BFS.
-
-
