@@ -15,7 +15,7 @@ def read_graph_from_file(filename: str) -> Graph:
             graph.add_edge(v1, v2)
     return graph
 
-def visualize_graph(graph: Graph, path: list = [None]):
+def visualize_graph(graph: Graph, path: list = []):
     G = nx.Graph()
     for vertex in graph.get_all_vertices():
         G.add_node(vertex)
