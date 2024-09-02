@@ -1,0 +1,10 @@
+add-vertex Z : success
+add-vertex U : success
+add-edge U Z : success
+add-edge Z U : success
+has-vertex A : success
+has-vertex B : success
+has-edge A B : success
+has-edge B U : fail
+remove-edge U Z : success
+remove-vertex Z : success

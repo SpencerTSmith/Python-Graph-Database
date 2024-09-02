@@ -1,0 +1,12 @@
+add-vertex Z
+add-vertex U
+add-edge U Z
+add-edge Z U
+has-vertex A
+has-vertex B
+has-edge A B
+has-edge B U
+remove-edge U Z
+remove-vertex Z
+get-neighborhood A
+get-shortest-path A G
