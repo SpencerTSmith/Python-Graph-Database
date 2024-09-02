@@ -92,7 +92,7 @@ def execute_command(ops: GraphOperations, command: str):
         else:
             print(f"No path found from {args[0]} to {args[1]}")
     elif cmd == "visualize" and len(args) == 0:
-        visualize_graph(ops.graph)
+        visualize_graph(ops._graph)
     else:
         print("Invalid command or wrong number of arguments")
 

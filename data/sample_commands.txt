@@ -15,5 +15,3 @@ remove-vertex Z
 remove-vertex Z
 get-neighborhood A
 get-neighborhood U
-get-shortest-path A G
-get-shortest-path U B

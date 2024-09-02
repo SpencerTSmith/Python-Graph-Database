@@ -40,7 +40,7 @@ def visualize_graph(graph: Graph, path: list = []):
 def main():
     # Get the absolute path to the sample_graph.txt file
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(current_dir, '..', 'data', 'sample_graph.txt')
+    file_path = os.path.join(current_dir, '..', 'data', 'sample_graph2.txt')
 
     # Read graph from file
     graph = read_graph_from_file(file_path)
