@@ -1,19 +1,44 @@
 #use command python -m src.main3
 from src.core.graph import Graph
-from src.core.operations import GraphOperations
+from core.operations2 import GraphOperations
 import os
 import networkx as nx
 import matplotlib.pyplot as plt
+from concurrent.futures import ThreadPoolExecutor
+from src.utils.logging_utils import log_operation, log_result, log_error
+import threading
 
-def read_graph_from_file(filename: str) -> Graph:
+def read_graph_from_file(filename: str, num_threads: int = 4) -> Graph:
     graph = Graph()
-    with open(filename, 'r') as f:
-        for line in f:
+    ops = GraphOperations(graph)
+    log_operation("read_graph_from_file", filename)
+    
+    lock = threading.Lock()
+    
+    def process_line(line):
+        try:
             v1, v2 = line.strip().split()
-            graph.add_vertex(v1)
-            graph.add_vertex(v2)
-            graph.add_edge(v1, v2)
-    return graph
+            with lock:
+                ops.add_vertex(v1)
+                ops.add_vertex(v2)
+                ops.add_edge(v1, v2)
+        except ValueError:
+            log_error("read_graph_from_file", f"Invalid line format: {line.strip()}")
+        except Exception as e:
+            log_error("read_graph_from_file", f"Error processing line: {str(e)}")
+
+    try:
+        with open(filename, 'r') as f:
+            lines = f.readlines()
+        
+        with ThreadPoolExecutor(max_workers=num_threads) as executor:
+            executor.map(process_line, lines)
+        
+        log_result("read_graph_from_file", f"Graph created with {len(ops.get_all_vertices())} vertices")
+        return graph
+    except Exception as e:
+        log_error("read_graph_from_file", f"Error reading file: {str(e)}")
+        raise
 
 def visualize_graph(graph: Graph, path: list = None):
     G = nx.Graph()
@@ -60,49 +85,52 @@ def execute_command(ops: GraphOperations, command: str):
     cmd = parts[0].lower()
     args = parts[1:]
 
-    if cmd == "add_vertex" and len(args) == 1:
-        result = ops.add_vertex(args[0])
-        print(f"Add vertex result: {result}")
-    elif cmd == "add_edge" and len(args) == 2:
-        result = ops.add_edge(args[0], args[1])
-        print(f"Add edge result: {result}")
-    elif cmd == "remove_vertex" and len(args) == 1:
-        result = ops.remove_vertex(args[0])
-        print(f"Remove vertex result: {result}")
-    elif cmd == "remove_edge" and len(args) == 2:
-        result = ops.remove_edge(args[0], args[1])
-        print(f"Remove edge result: {result}")
-    elif cmd == "has_vertex" and len(args) == 1:
-        result = ops.has_vertex(args[0])
-        print(f"Has vertex result: {result}")
-    elif cmd == "has_edge" and len(args) == 2:
-        result = ops.has_edge(args[0], args[1])
-        print(f"Has edge result: {result}")
-    elif cmd == "get_neighbors" and len(args) == 1:
-        result = ops.get_neighbors(args[0])
-        print(f"Neighbors: {result}")
-    elif cmd == "get_all_vertices" and len(args) == 0:
-        result = ops.get_all_vertices()
-        print(f"All vertices: {result}")
-    elif cmd == "get_shortest_path" and len(args) == 2:
-        path, time_taken = ops.get_shortest_path(args[0], args[1])
-        if path:
-            print(f"Shortest path from {args[0]} to {args[1]}: {' -> '.join(path)}")
-            print(f"Time taken: {time_taken:.6f} seconds")
+    try:
+        if cmd == "add_vertex" and len(args) == 1:
+            result = ops.parallel_operation(ops.add_vertex, args[0])
+            print(f"Add vertex result: {result}")
+        elif cmd == "add_edge" and len(args) == 2:
+            result = ops.parallel_operation(ops.add_edge, args[0], args[1])
+            print(f"Add edge result: {result}")
+        elif cmd == "remove_vertex" and len(args) == 1:
+            result = ops.parallel_operation(ops.remove_vertex, args[0])
+            print(f"Remove vertex result: {result}")
+        elif cmd == "remove_edge" and len(args) == 2:
+            result = ops.parallel_operation(ops.remove_edge, args[0], args[1])
+            print(f"Remove edge result: {result}")
+        elif cmd == "has_vertex" and len(args) == 1:
+            result = ops.parallel_operation(ops.has_vertex, args[0])
+            print(f"Has vertex result: {result}")
+        elif cmd == "has_edge" and len(args) == 2:
+            result = ops.parallel_operation(ops.has_edge, args[0], args[1])
+            print(f"Has edge result: {result}")
+        elif cmd == "get_neighbors" and len(args) == 1:
+            result = ops.parallel_operation(ops.get_neighbors, args[0])
+            print(f"Neighbors: {result}")
+        elif cmd == "get_all_vertices" and len(args) == 0:
+            result = ops.parallel_operation(ops.get_all_vertices)
+            print(f"All vertices: {result}")
+        elif cmd == "get_shortest_path" and len(args) == 2:
+            path, time_taken = ops.get_shortest_path(args[0], args[1])
+            if path:
+                print(f"Shortest path from {args[0]} to {args[1]}: {' -> '.join(path)}")
+                print(f"Time taken: {time_taken:.6f} seconds")
+            else:
+                print(f"No path found from {args[0]} to {args[1]}")
+        elif cmd == "visualize" and len(args) == 0:
+            visualize_graph(ops.graph)
         else:
-            print(f"No path found from {args[0]} to {args[1]}")
-    elif cmd == "visualize" and len(args) == 0:
-        visualize_graph(ops.graph)
-    else:
-        print("Invalid command or wrong number of arguments")
+            print("Invalid command or wrong number of arguments")
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
 
 def main():
     # Get the absolute path to the sample_graph.txt file
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(current_dir, '..', 'data', 'sample_graph.txt')
+    file_path = os.path.join(current_dir, '..', 'data', 'large_graph.txt')
 
     # Read graph from file
-    graph = read_graph_from_file(file_path)
+    graph = read_graph_from_file(file_path, num_threads=8)
     
     # Create GraphOperations instance
     ops = GraphOperations(graph)

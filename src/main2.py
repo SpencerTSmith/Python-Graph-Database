@@ -1,6 +1,6 @@
 #use command python -m src.main2
 from src.core.graph import Graph
-from src.core.operations import GraphOperations
+from core.operations2 import GraphOperations
 import os
 import networkx as nx
 import matplotlib.pyplot as plt

@@ -1,6 +1,6 @@
 #use command python -m src.main
 from src.core.graph import Graph
-from src.core.operations import GraphOperations
+from core.operations2 import GraphOperations
 import os
 
 def read_graph_from_file(filename: str) -> Graph:

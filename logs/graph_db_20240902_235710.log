@@ -1,0 +1,6 @@
+2024-09-02 23:57:22,824 INFO [Thread-3924] Operation: add_vertex, Args: ('Z',)
+2024-09-02 23:57:22,824 INFO [Thread-3924] Operation: add_vertex, Result: True
+2024-09-02 23:58:04,516 INFO [Thread-3924] Operation: remove_edge, Args: ('B', 'D')
+2024-09-02 23:58:04,517 INFO [Thread-3924] Operation: remove_edge, Result: True
+2024-09-02 23:58:53,190 INFO [Thread-3924] Operation: get_all_vertices, Args: ()
+2024-09-02 23:58:53,190 INFO [Thread-3924] Operation: get_all_vertices, Result: {'B', 'O', 'F', 'K', 'D', 'A', 'I', 'T', 'S', 'E', 'R', 'M', 'Z', 'Q', 'J', 'N', 'C', 'H', 'P', 'G', 'L'}
