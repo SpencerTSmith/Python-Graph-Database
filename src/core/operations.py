@@ -58,39 +58,38 @@ class GraphOperations:
         with open(command_file, 'r') as commands, open(output_file, 'w') as output:
             output.write('Graph before commands:\n')
             # pretty print looks better than str()
-            pprint(self._graph._vertices, stream = output)
+            pprint(self._graph._vertices, stream=output)
 
             for line in commands:
                 tokens = line.strip().split(' ')
 
                 match tokens[0]:
-                    # NOTE(spencer): What do you all think? Is this readable? We may want to create a formatting function to make this prettier.
                     case Commands.ADD_VERT:
                         result = self.add_vertex(tokens[1])
-                        output.write(f'{Commands.ADD_VERT} {tokens[1]} : {( 'success' if result else 'fail' )}\n')
+                        output.write(f"{Commands.ADD_VERT} {tokens[1]} : {'success' if result else 'fail'}\n")
                     case Commands.ADD_EDGE:
                         result = self.add_edge(tokens[1], tokens[2])
-                        output.write(f'{Commands.ADD_EDGE} {tokens[1]} {tokens[2]} : {( 'success' if result else 'fail' )}\n')
+                        output.write(f"{Commands.ADD_EDGE} {tokens[1]} {tokens[2]} : {'success' if result else 'fail'}\n")
                     case Commands.REM_VERT:
                         result = self.remove_vertex(tokens[1])
-                        output.write(f'{Commands.REM_VERT} {tokens[1]} : {( 'success' if result else 'fail' )}\n')
+                        output.write(f"{Commands.REM_VERT} {tokens[1]} : {'success' if result else 'fail'}\n")
                     case Commands.REM_EDGE:
                         result = self.remove_edge(tokens[1], tokens[2])
-                        output.write(f'{Commands.REM_EDGE} {tokens[1]} {tokens[2]} : {( 'success' if result else 'fail' )}\n')
+                        output.write(f"{Commands.REM_EDGE} {tokens[1]} {tokens[2]} : {'success' if result else 'fail'}\n")
                     case Commands.HAS_VERT:
                         result = self.has_vertex(tokens[1])
-                        output.write(f'{Commands.HAS_VERT} {tokens[1]} : {str(result)}\n')
+                        output.write(f"{Commands.HAS_VERT} {tokens[1]} : {str(result)}\n")
                     case Commands.HAS_EDGE:
                         result = self.has_edge(tokens[1], tokens[2])
-                        output.write(f'{Commands.HAS_EDGE} {tokens[1]} {tokens[2]} : {str(result)}\n')
+                        output.write(f"{Commands.HAS_EDGE} {tokens[1]} {tokens[2]} : {str(result)}\n")
                     case Commands.GET_HOOD:
                         neighborhood = self.get_neighbors(tokens[1])
-                        output.write(f'{Commands.GET_HOOD} {tokens[1]} : {str(neighborhood)}\n')
+                        output.write(f"{Commands.GET_HOOD} {tokens[1]} : {str(neighborhood)}\n")
                     case Commands.GET_SSSP:
                         path, sp_time = self.get_shortest_path(tokens[1], tokens[2])
-                        output.write(f'{Commands.GET_SSSP} {tokens[1]} {tokens[2]} : {str(path)} in {sp_time: .6f} seconds\n')
+                        output.write(f"{Commands.GET_SSSP} {tokens[1]} {tokens[2]} : {str(path)} in {sp_time:.6f} seconds\n")
 
             output.write("\nGraph after commands:\n")
-            pprint(self._graph._vertices, stream = output)
+            pprint(self._graph._vertices, stream=output)
             stop_time = time.time()
-            output.write(f"Excecuted all commands in: {stop_time - start_time: .6f}\n")
+            output.write(f"Executed all commands in: {stop_time - start_time:.6f}\n")

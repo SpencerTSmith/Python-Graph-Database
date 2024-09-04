@@ -12,12 +12,21 @@ import threading
 def read_file_portion(graph: Graph, filename: str, start: int, end: int):
     with open(filename, 'r') as file:
         file.seek(start)
+        
+        # If we're not at the beginning of the file, discard the first (potentially partial) line
+        if start > 0:
+            file.readline()
+        
         while file.tell() < end:
-            line = file.readline()
+            line = file.readline().strip()
             if not line:
-                break
-            v1, v2 = line.strip().split()
-            # NOTE(spencer): these are all locked individually, would it be faster to have just one lock here instead?
+                continue  # Skip empty lines
+            
+            parts = line.split()
+            if len(parts) != 2:
+                continue  # Skip lines that don't have exactly two vertices
+            
+            v1, v2 = parts
             graph.add_vertex(v1)
             graph.add_vertex(v2)
             graph.add_edge(v1, v2)
@@ -32,15 +41,11 @@ def read_graph_from_file_t(filename: str) -> Tuple[Graph, float]:
     graph_file_size = os.path.getsize(filename)
     file_portion_size = graph_file_size // num_threads
 
-    file_portions = []
+    threads = []
     for i in range(num_threads):
         portion_start = i * file_portion_size
         portion_end = ((i + 1) * file_portion_size) if i < num_threads - 1 else graph_file_size
-        file_portions.append((portion_start, portion_end))
-
-    threads = []
-    for portion_start, portion_end in file_portions:
-        thread = threading.Thread(target=read_file_portion, args = (graph, filename, portion_start, portion_end))
+        thread = threading.Thread(target=read_file_portion, args=(graph, filename, portion_start, portion_end))
         threads.append(thread)
         thread.start()
 
@@ -71,17 +76,16 @@ def read_graph_from_file(filename: str) -> Tuple[Graph, float]:
 
 def main():
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    graph_path = os.path.join(current_dir, '..', 'data', 'sample_graph1.txt')
+    graph_path = os.path.join(current_dir, '..', 'data', 'large_graph.txt')
     command_path = os.path.join(current_dir, '..', 'data', 'sample_commands.txt')
     output_path = os.path.join(current_dir, '..', 'data', 'sample_output.txt')
 
-    # NOTE(spencer): probably would be best to move this into a constructor that takes a file path as arg
     graph, create_time = read_graph_from_file_t(graph_path)
 
     ops = GraphOperations(graph)
 
     ops.execute_commands(command_path, output_path)
-    print(f'Created graph in : {create_time: 0.6f}\n')
+    print(f'Created graph in : {create_time:.6f}\n')
 
 if __name__ == "__main__":
     main()
