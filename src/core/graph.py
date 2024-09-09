@@ -46,7 +46,7 @@ class Graph:
         if len(self._vertices) != len(other._vertices):
             return False
 
-        for vertex in self._vertices.items():
+        for vertex in self._vertices:
             if vertex not in other._vertices:
                 return False
             if self._vertices[vertex] != other._vertices[vertex]:
