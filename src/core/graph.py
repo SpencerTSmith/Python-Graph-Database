@@ -38,6 +38,23 @@ class Graph:
                 return True
             return False
 
+
+    def __eq__(self, other) ->bool:
+        if not isinstance(other, Graph):
+            return False
+
+        if len(self._vertices) != len(other._vertices):
+            return False
+
+        for vertex in self._vertices.items():
+            if vertex not in other._vertices:
+                return False
+            if self._vertices[vertex] != other._vertices[vertex]:
+                return False
+        return True
+        
+
+
     def has_vertex(self, v: str) -> bool:
         with self._lock:
             return v in self._vertices

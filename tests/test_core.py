@@ -16,11 +16,18 @@ def read_graph_from_file(filename: str) -> Graph:
 
 class TestGraphOperations(unittest.TestCase):
     def test_graph(self):
+
         current_dir = os.path.dirname(os.path.abspath(__file__))
+        
+
         file_path = os.path.join(current_dir, '..', 'data', 'sample_graph.txt')
+        
+
         graph = read_graph_from_file(file_path)
-        file_path = os.path.join(current_dir, '..', 'data', 'sample_graph.txt')
+        
+
         outputGraph = read_graph_from_file(file_path)
+
         self.assertEqual(graph, outputGraph)
 
 if __name__ == '__main__':
