@@ -16,7 +16,7 @@
 # This specific template is located at:
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
 default:
-    image: python:3.8
+    image: python:3.10
     before_script:
        - apt-get update
        - apt-get install -y python3-pip
