@@ -20,6 +20,7 @@ default:
     before_script:
        - apt-get update
        - apt-get install -y python3-pip
+       - pip install coverage
        
 stages:          # List of stages for jobs, and their order of execution
   - build
