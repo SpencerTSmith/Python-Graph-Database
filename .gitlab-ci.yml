@@ -15,7 +15,12 @@
 # https://docs.gitlab.com/ee/development/cicd/templates.html
 # This specific template is located at:
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
-
+default:
+    image: python:3.8
+    before_script:
+       - apt-get update
+       - apt-get install -y python3-pip
+       
 stages:          # List of stages for jobs, and their order of execution
   - build
   - test
