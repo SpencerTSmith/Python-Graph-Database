@@ -12,8 +12,12 @@ class Commands(StrEnum):
     REM_EDGE = "remove-edge"
     HAS_VERT = "has-vertex"
     HAS_EDGE = "has-edge"
+    HAS_PATH = "has-path"
     GET_HOOD = "get-neighborhood"
     GET_SSSP = "get-shortest-path"
+    GET_VRTS = "get-all-vertices"
+    GET_EDGS = "get-all-edges"
+    
 
 class GraphOperations:
     def __init__(self, graph: Graph):
@@ -36,6 +40,10 @@ class GraphOperations:
 
     def has_edge(self, v1: str, v2: str) -> bool:
         return self._graph.has_edge(v1, v2)
+
+    def has_path(self, start: str, end: str) -> bool: 
+        path = self.get_shortest_path(start, end)
+        return True if path else False
 
     def get_neighbors(self, v: str) -> Optional[List[str]]:
         neighbors = self._graph.get_neighbors(v)
