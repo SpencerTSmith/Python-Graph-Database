@@ -1,0 +1,63 @@
+2024-09-09 20:20:37,603 INFO [Thread-140607383203840] Operation: read_graph_from_file, Args: ('/mnt/c/Users/cmcor/OneDrive/Documents/CS4113/dosfa24lab00team06/src/../data/sample_graph.txt',)
+2024-09-09 20:20:37,607 INFO [Thread-140606831588928] Operation: add_vertex, Args: ('A',)
+2024-09-09 20:20:37,607 ERROR [Thread-140606831588928] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,607 INFO [Thread-140606823196224] Operation: add_vertex, Args: ('A',)
+2024-09-09 20:20:37,608 ERROR [Thread-140606823196224] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,609 INFO [Thread-140606814803520] Operation: add_vertex, Args: ('B',)
+2024-09-09 20:20:37,609 ERROR [Thread-140606814803520] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,609 INFO [Thread-140606806410816] Operation: add_vertex, Args: ('B',)
+2024-09-09 20:20:37,610 ERROR [Thread-140606806410816] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,610 INFO [Thread-140606831588928] Operation: add_vertex, Args: ('C',)
+2024-09-09 20:20:37,610 ERROR [Thread-140606831588928] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,610 INFO [Thread-140606798018112] Operation: add_vertex, Args: ('C',)
+2024-09-09 20:20:37,611 ERROR [Thread-140606798018112] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,611 INFO [Thread-140606789625408] Operation: add_vertex, Args: ('D',)
+2024-09-09 20:20:37,611 ERROR [Thread-140606789625408] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,611 INFO [Thread-140606781232704] Operation: add_vertex, Args: ('E',)
+2024-09-09 20:20:37,612 ERROR [Thread-140606781232704] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,612 INFO [Thread-140606772840000] Operation: add_vertex, Args: ('F',)
+2024-09-09 20:20:37,612 ERROR [Thread-140606772840000] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,612 INFO [Thread-140606823196224] Operation: add_vertex, Args: ('G',)
+2024-09-09 20:20:37,612 ERROR [Thread-140606823196224] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,613 INFO [Thread-140606814803520] Operation: add_vertex, Args: ('H',)
+2024-09-09 20:20:37,613 ERROR [Thread-140606814803520] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,613 INFO [Thread-140606806410816] Operation: add_vertex, Args: ('I',)
+2024-09-09 20:20:37,613 ERROR [Thread-140606806410816] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,613 INFO [Thread-140606831588928] Operation: add_vertex, Args: ('J',)
+2024-09-09 20:20:37,614 ERROR [Thread-140606831588928] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,614 INFO [Thread-140606798018112] Operation: add_vertex, Args: ('K',)
+2024-09-09 20:20:37,614 ERROR [Thread-140606798018112] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,614 INFO [Thread-140606789625408] Operation: add_vertex, Args: ('L',)
+2024-09-09 20:20:37,614 ERROR [Thread-140606789625408] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,615 INFO [Thread-140606781232704] Operation: add_vertex, Args: ('M',)
+2024-09-09 20:20:37,615 ERROR [Thread-140606781232704] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,615 INFO [Thread-140606772840000] Operation: add_vertex, Args: ('N',)
+2024-09-09 20:20:37,615 ERROR [Thread-140606772840000] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,615 INFO [Thread-140606823196224] Operation: add_vertex, Args: ('O',)
+2024-09-09 20:20:37,616 ERROR [Thread-140606823196224] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,616 INFO [Thread-140606814803520] Operation: add_vertex, Args: ('P',)
+2024-09-09 20:20:37,616 ERROR [Thread-140606814803520] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,616 INFO [Thread-140606806410816] Operation: add_vertex, Args: ('A',)
+2024-09-09 20:20:37,617 ERROR [Thread-140606806410816] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,617 INFO [Thread-140606831588928] Operation: add_vertex, Args: ('B',)
+2024-09-09 20:20:37,617 ERROR [Thread-140606831588928] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,618 INFO [Thread-140606798018112] Operation: add_vertex, Args: ('C',)
+2024-09-09 20:20:37,618 ERROR [Thread-140606798018112] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,618 INFO [Thread-140606789625408] Operation: add_vertex, Args: ('D',)
+2024-09-09 20:20:37,618 ERROR [Thread-140606789625408] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,618 INFO [Thread-140606781232704] Operation: add_vertex, Args: ('E',)
+2024-09-09 20:20:37,619 ERROR [Thread-140606781232704] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,619 INFO [Thread-140606772840000] Operation: add_vertex, Args: ('F',)
+2024-09-09 20:20:37,619 ERROR [Thread-140606772840000] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,619 INFO [Thread-140606823196224] Operation: add_vertex, Args: ('G',)
+2024-09-09 20:20:37,620 ERROR [Thread-140606823196224] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,620 INFO [Thread-140606814803520] Operation: add_vertex, Args: ('H',)
+2024-09-09 20:20:37,620 ERROR [Thread-140606814803520] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,620 INFO [Thread-140606806410816] Operation: add_vertex, Args: ('I',)
+2024-09-09 20:20:37,621 ERROR [Thread-140606806410816] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,621 INFO [Thread-140606831588928] Operation: add_vertex, Args: ('J',)
+2024-09-09 20:20:37,621 ERROR [Thread-140606831588928] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,621 INFO [Thread-140606798018112] Operation: add_vertex, Args: ('K',)
+2024-09-09 20:20:37,621 ERROR [Thread-140606798018112] Operation: read_graph_from_file, Error: Error processing line: 'module' object is not callable
+2024-09-09 20:20:37,622 INFO [Thread-140607383203840] Operation: get_all_vertices, Args: ()
+2024-09-09 20:20:37,622 ERROR [Thread-140607383203840] Operation: read_graph_from_file, Error: Error reading file: 'module' object is not callable

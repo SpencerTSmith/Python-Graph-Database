@@ -16,56 +16,56 @@ class GraphOperations:
         log_operation("add_vertex", v)
         with self.lock:
             result = self.graph.add_vertex(v)
-        log_result("add_vertex", result)
+        log_result("add_vertex", (result, time.time()))
         return result
 
     def add_edge(self, v1: str, v2: str) -> bool:
         log_operation("add_edge", v1, v2)
         with self.lock:
             result = self.graph.add_edge(v1, v2)
-        log_result("add_edge", result)
+        log_result("add_edge", (result, time.time()))
         return result
 
     def remove_vertex(self, v: str) -> bool:
         log_operation("remove_vertex", v)
         with self.lock:
             result = self.graph.remove_vertex(v)
-        log_result("remove_vertex", result)
+        log_result("remove_vertex", (result, time.time()))
         return result
 
     def remove_edge(self, v1: str, v2: str) -> bool:
         log_operation("remove_edge", v1, v2)
         with self.lock:
             result = self.graph.remove_edge(v1, v2)
-        log_result("remove_edge", result)
+        log_result("remove_edge", (result, time.time()))
         return result
 
     def has_vertex(self, v: str) -> bool:
         log_operation("has_vertex", v)
         with self.lock:
             result = self.graph.has_vertex(v)
-        log_result("has_vertex", result)
+        log_result("has_vertex", (result, time.time()))
         return result
 
     def has_edge(self, v1: str, v2: str) -> bool:
         log_operation("has_edge", v1, v2)
         with self.lock:
             result = self.graph.has_edge(v1, v2)
-        log_result("has_edge", result)
+        log_result("has_edge", (result, time.time()))
         return result
 
     def get_neighbors(self, v: str) -> Optional[Set[str]]:
         log_operation("get_neighbors", v)
         with self.lock:
             result = self.graph.get_neighbors(v)
-        log_result("get_neighbors", result)
+        log_result("get_neighbors", (result, time.time()))
         return result
 
     def get_all_vertices(self) -> Set[str]:
         log_operation("get_all_vertices")
         with self.lock:
             result = self.graph.get_all_vertices()
-        log_result("get_all_vertices", result)
+        log_result("get_all_vertices", (result, time.time()))
         return result
 
     def get_shortest_path(self, start: str, end: str) -> Tuple[Optional[List[str]], float]:
@@ -81,7 +81,7 @@ class GraphOperations:
         
         end_time = time.time()
         time_taken = end_time - start_time
-        log_result("get_shortest_path", (path, time_taken))
+        log_result("get_shortest_path", (path, time_taken, time.time()))
         return path, time_taken
 
     def parallel_operation(self, operation, *args):

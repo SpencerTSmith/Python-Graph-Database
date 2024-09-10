@@ -1,0 +1,185 @@
+2024-09-09 19:58:45,450 INFO [Thread-140524189458432] Operation: read_graph_from_file, Args: ('/mnt/c/Users/cmcor/OneDrive/Documents/CS4113/dosfa24lab00team06/src/../data/sample_graph.txt',)
+2024-09-09 19:58:45,454 INFO [Thread-140523637569088] Operation: add_vertex, Args: ('A',)
+2024-09-09 19:58:45,454 INFO [Thread-140523637569088] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,455 INFO [Thread-140523637569088] Operation: add_vertex, Args: ('B',)
+2024-09-09 19:58:45,455 INFO [Thread-140523637569088] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,455 INFO [Thread-140523637569088] Operation: add_edge, Args: ('A', 'B')
+2024-09-09 19:58:45,456 INFO [Thread-140523637569088] Operation: add_edge, Result: True
+2024-09-09 19:58:45,457 INFO [Thread-140523629176384] Operation: add_vertex, Args: ('A',)
+2024-09-09 19:58:45,457 INFO [Thread-140523629176384] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,457 INFO [Thread-140523629176384] Operation: add_vertex, Args: ('C',)
+2024-09-09 19:58:45,457 INFO [Thread-140523629176384] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,457 INFO [Thread-140523629176384] Operation: add_edge, Args: ('A', 'C')
+2024-09-09 19:58:45,457 INFO [Thread-140523629176384] Operation: add_edge, Result: True
+2024-09-09 19:58:45,457 INFO [Thread-140523545294400] Operation: add_vertex, Args: ('B',)
+2024-09-09 19:58:45,458 INFO [Thread-140523545294400] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,458 INFO [Thread-140523545294400] Operation: add_vertex, Args: ('D',)
+2024-09-09 19:58:45,458 INFO [Thread-140523545294400] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,458 INFO [Thread-140523545294400] Operation: add_edge, Args: ('B', 'D')
+2024-09-09 19:58:45,458 INFO [Thread-140523545294400] Operation: add_edge, Result: True
+2024-09-09 19:58:45,458 INFO [Thread-140523536901696] Operation: add_vertex, Args: ('B',)
+2024-09-09 19:58:45,459 INFO [Thread-140523536901696] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,459 INFO [Thread-140523536901696] Operation: add_vertex, Args: ('E',)
+2024-09-09 19:58:45,459 INFO [Thread-140523536901696] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,459 INFO [Thread-140523536901696] Operation: add_edge, Args: ('B', 'E')
+2024-09-09 19:58:45,459 INFO [Thread-140523536901696] Operation: add_edge, Result: True
+2024-09-09 19:58:45,460 INFO [Thread-140523528508992] Operation: add_vertex, Args: ('C',)
+2024-09-09 19:58:45,460 INFO [Thread-140523528508992] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,460 INFO [Thread-140523528508992] Operation: add_vertex, Args: ('F',)
+2024-09-09 19:58:45,460 INFO [Thread-140523528508992] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,460 INFO [Thread-140523528508992] Operation: add_edge, Args: ('C', 'F')
+2024-09-09 19:58:45,460 INFO [Thread-140523528508992] Operation: add_edge, Result: True
+2024-09-09 19:58:45,461 INFO [Thread-140523520116288] Operation: add_vertex, Args: ('C',)
+2024-09-09 19:58:45,461 INFO [Thread-140523520116288] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,461 INFO [Thread-140523520116288] Operation: add_vertex, Args: ('G',)
+2024-09-09 19:58:45,461 INFO [Thread-140523520116288] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,461 INFO [Thread-140523520116288] Operation: add_edge, Args: ('C', 'G')
+2024-09-09 19:58:45,462 INFO [Thread-140523520116288] Operation: add_edge, Result: True
+2024-09-09 19:58:45,462 INFO [Thread-140523511723584] Operation: add_vertex, Args: ('D',)
+2024-09-09 19:58:45,462 INFO [Thread-140523511723584] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,462 INFO [Thread-140523511723584] Operation: add_vertex, Args: ('H',)
+2024-09-09 19:58:45,463 INFO [Thread-140523511723584] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,463 INFO [Thread-140523511723584] Operation: add_edge, Args: ('D', 'H')
+2024-09-09 19:58:45,463 INFO [Thread-140523511723584] Operation: add_edge, Result: True
+2024-09-09 19:58:45,463 INFO [Thread-140523503330880] Operation: add_vertex, Args: ('E',)
+2024-09-09 19:58:45,463 INFO [Thread-140523503330880] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,464 INFO [Thread-140523503330880] Operation: add_vertex, Args: ('I',)
+2024-09-09 19:58:45,464 INFO [Thread-140523503330880] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,464 INFO [Thread-140523503330880] Operation: add_edge, Args: ('E', 'I')
+2024-09-09 19:58:45,464 INFO [Thread-140523503330880] Operation: add_edge, Result: True
+2024-09-09 19:58:45,464 INFO [Thread-140523637569088] Operation: add_vertex, Args: ('F',)
+2024-09-09 19:58:45,464 INFO [Thread-140523637569088] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,465 INFO [Thread-140523637569088] Operation: add_vertex, Args: ('J',)
+2024-09-09 19:58:45,465 INFO [Thread-140523637569088] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,465 INFO [Thread-140523637569088] Operation: add_edge, Args: ('F', 'J')
+2024-09-09 19:58:45,465 INFO [Thread-140523637569088] Operation: add_edge, Result: True
+2024-09-09 19:58:45,465 INFO [Thread-140523629176384] Operation: add_vertex, Args: ('G',)
+2024-09-09 19:58:45,465 INFO [Thread-140523629176384] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,466 INFO [Thread-140523629176384] Operation: add_vertex, Args: ('K',)
+2024-09-09 19:58:45,466 INFO [Thread-140523629176384] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,466 INFO [Thread-140523629176384] Operation: add_edge, Args: ('G', 'K')
+2024-09-09 19:58:45,466 INFO [Thread-140523629176384] Operation: add_edge, Result: True
+2024-09-09 19:58:45,466 INFO [Thread-140523545294400] Operation: add_vertex, Args: ('H',)
+2024-09-09 19:58:45,466 INFO [Thread-140523545294400] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,467 INFO [Thread-140523545294400] Operation: add_vertex, Args: ('L',)
+2024-09-09 19:58:45,467 INFO [Thread-140523545294400] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,467 INFO [Thread-140523545294400] Operation: add_edge, Args: ('H', 'L')
+2024-09-09 19:58:45,467 INFO [Thread-140523545294400] Operation: add_edge, Result: True
+2024-09-09 19:58:45,467 INFO [Thread-140523536901696] Operation: add_vertex, Args: ('I',)
+2024-09-09 19:58:45,467 INFO [Thread-140523536901696] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,467 INFO [Thread-140523536901696] Operation: add_vertex, Args: ('M',)
+2024-09-09 19:58:45,468 INFO [Thread-140523536901696] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,468 INFO [Thread-140523536901696] Operation: add_edge, Args: ('I', 'M')
+2024-09-09 19:58:45,468 INFO [Thread-140523536901696] Operation: add_edge, Result: True
+2024-09-09 19:58:45,468 INFO [Thread-140523528508992] Operation: add_vertex, Args: ('J',)
+2024-09-09 19:58:45,468 INFO [Thread-140523528508992] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,469 INFO [Thread-140523528508992] Operation: add_vertex, Args: ('N',)
+2024-09-09 19:58:45,469 INFO [Thread-140523528508992] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,469 INFO [Thread-140523528508992] Operation: add_edge, Args: ('J', 'N')
+2024-09-09 19:58:45,469 INFO [Thread-140523528508992] Operation: add_edge, Result: True
+2024-09-09 19:58:45,470 INFO [Thread-140523520116288] Operation: add_vertex, Args: ('K',)
+2024-09-09 19:58:45,470 INFO [Thread-140523520116288] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,470 INFO [Thread-140523520116288] Operation: add_vertex, Args: ('O',)
+2024-09-09 19:58:45,470 INFO [Thread-140523520116288] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,470 INFO [Thread-140523520116288] Operation: add_edge, Args: ('K', 'O')
+2024-09-09 19:58:45,471 INFO [Thread-140523520116288] Operation: add_edge, Result: True
+2024-09-09 19:58:45,471 INFO [Thread-140523511723584] Operation: add_vertex, Args: ('L',)
+2024-09-09 19:58:45,471 INFO [Thread-140523511723584] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,471 INFO [Thread-140523511723584] Operation: add_vertex, Args: ('P',)
+2024-09-09 19:58:45,471 INFO [Thread-140523511723584] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,471 INFO [Thread-140523511723584] Operation: add_edge, Args: ('L', 'P')
+2024-09-09 19:58:45,472 INFO [Thread-140523511723584] Operation: add_edge, Result: True
+2024-09-09 19:58:45,472 INFO [Thread-140523503330880] Operation: add_vertex, Args: ('M',)
+2024-09-09 19:58:45,472 INFO [Thread-140523503330880] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,472 INFO [Thread-140523503330880] Operation: add_vertex, Args: ('Q',)
+2024-09-09 19:58:45,472 INFO [Thread-140523503330880] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,472 INFO [Thread-140523503330880] Operation: add_edge, Args: ('M', 'Q')
+2024-09-09 19:58:45,473 INFO [Thread-140523503330880] Operation: add_edge, Result: True
+2024-09-09 19:58:45,473 INFO [Thread-140523637569088] Operation: add_vertex, Args: ('N',)
+2024-09-09 19:58:45,473 INFO [Thread-140523637569088] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,473 INFO [Thread-140523637569088] Operation: add_vertex, Args: ('R',)
+2024-09-09 19:58:45,474 INFO [Thread-140523637569088] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,474 INFO [Thread-140523637569088] Operation: add_edge, Args: ('N', 'R')
+2024-09-09 19:58:45,474 INFO [Thread-140523637569088] Operation: add_edge, Result: True
+2024-09-09 19:58:45,474 INFO [Thread-140523629176384] Operation: add_vertex, Args: ('O',)
+2024-09-09 19:58:45,474 INFO [Thread-140523629176384] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,474 INFO [Thread-140523629176384] Operation: add_vertex, Args: ('S',)
+2024-09-09 19:58:45,475 INFO [Thread-140523629176384] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,475 INFO [Thread-140523629176384] Operation: add_edge, Args: ('O', 'S')
+2024-09-09 19:58:45,475 INFO [Thread-140523629176384] Operation: add_edge, Result: True
+2024-09-09 19:58:45,475 INFO [Thread-140523629176384] Operation: add_vertex, Args: ('G',)
+2024-09-09 19:58:45,475 INFO [Thread-140523629176384] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,476 INFO [Thread-140523629176384] Operation: add_vertex, Args: ('M',)
+2024-09-09 19:58:45,476 INFO [Thread-140523629176384] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,476 INFO [Thread-140523629176384] Operation: add_edge, Args: ('G', 'M')
+2024-09-09 19:58:45,476 INFO [Thread-140523629176384] Operation: add_edge, Result: True
+2024-09-09 19:58:45,476 INFO [Thread-140523536901696] Operation: add_vertex, Args: ('A',)
+2024-09-09 19:58:45,477 INFO [Thread-140523536901696] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,477 INFO [Thread-140523536901696] Operation: add_vertex, Args: ('D',)
+2024-09-09 19:58:45,477 INFO [Thread-140523536901696] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,477 INFO [Thread-140523536901696] Operation: add_edge, Args: ('A', 'D')
+2024-09-09 19:58:45,477 INFO [Thread-140523536901696] Operation: add_edge, Result: True
+2024-09-09 19:58:45,478 INFO [Thread-140523528508992] Operation: add_vertex, Args: ('B',)
+2024-09-09 19:58:45,478 INFO [Thread-140523528508992] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,478 INFO [Thread-140523528508992] Operation: add_vertex, Args: ('F',)
+2024-09-09 19:58:45,478 INFO [Thread-140523528508992] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,478 INFO [Thread-140523528508992] Operation: add_edge, Args: ('B', 'F')
+2024-09-09 19:58:45,479 INFO [Thread-140523528508992] Operation: add_edge, Result: True
+2024-09-09 19:58:45,479 INFO [Thread-140523520116288] Operation: add_vertex, Args: ('C',)
+2024-09-09 19:58:45,479 INFO [Thread-140523520116288] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,479 INFO [Thread-140523520116288] Operation: add_vertex, Args: ('H',)
+2024-09-09 19:58:45,479 INFO [Thread-140523520116288] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,479 INFO [Thread-140523520116288] Operation: add_edge, Args: ('C', 'H')
+2024-09-09 19:58:45,479 INFO [Thread-140523520116288] Operation: add_edge, Result: True
+2024-09-09 19:58:45,480 INFO [Thread-140523511723584] Operation: add_vertex, Args: ('D',)
+2024-09-09 19:58:45,480 INFO [Thread-140523511723584] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,480 INFO [Thread-140523511723584] Operation: add_vertex, Args: ('J',)
+2024-09-09 19:58:45,480 INFO [Thread-140523511723584] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,481 INFO [Thread-140523511723584] Operation: add_edge, Args: ('D', 'J')
+2024-09-09 19:58:45,481 INFO [Thread-140523511723584] Operation: add_edge, Result: True
+2024-09-09 19:58:45,481 INFO [Thread-140523503330880] Operation: add_vertex, Args: ('E',)
+2024-09-09 19:58:45,481 INFO [Thread-140523503330880] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,481 INFO [Thread-140523503330880] Operation: add_vertex, Args: ('K',)
+2024-09-09 19:58:45,482 INFO [Thread-140523503330880] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,482 INFO [Thread-140523503330880] Operation: add_edge, Args: ('E', 'K')
+2024-09-09 19:58:45,482 INFO [Thread-140523503330880] Operation: add_edge, Result: True
+2024-09-09 19:58:45,482 INFO [Thread-140523637569088] Operation: add_vertex, Args: ('F',)
+2024-09-09 19:58:45,483 INFO [Thread-140523637569088] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,483 INFO [Thread-140523637569088] Operation: add_vertex, Args: ('L',)
+2024-09-09 19:58:45,483 INFO [Thread-140523637569088] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,483 INFO [Thread-140523637569088] Operation: add_edge, Args: ('F', 'L')
+2024-09-09 19:58:45,484 INFO [Thread-140523637569088] Operation: add_edge, Result: True
+2024-09-09 19:58:45,484 INFO [Thread-140523545294400] Operation: add_vertex, Args: ('P',)
+2024-09-09 19:58:45,484 INFO [Thread-140523545294400] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,484 INFO [Thread-140523545294400] Operation: add_vertex, Args: ('T',)
+2024-09-09 19:58:45,484 INFO [Thread-140523545294400] Operation: add_vertex, Result: True
+2024-09-09 19:58:45,485 INFO [Thread-140523545294400] Operation: add_edge, Args: ('P', 'T')
+2024-09-09 19:58:45,485 INFO [Thread-140523545294400] Operation: add_edge, Result: True
+2024-09-09 19:58:45,485 INFO [Thread-140523629176384] Operation: add_vertex, Args: ('H',)
+2024-09-09 19:58:45,485 INFO [Thread-140523629176384] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,485 INFO [Thread-140523629176384] Operation: add_vertex, Args: ('N',)
+2024-09-09 19:58:45,485 INFO [Thread-140523629176384] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,486 INFO [Thread-140523629176384] Operation: add_edge, Args: ('H', 'N')
+2024-09-09 19:58:45,486 INFO [Thread-140523629176384] Operation: add_edge, Result: True
+2024-09-09 19:58:45,486 INFO [Thread-140523536901696] Operation: add_vertex, Args: ('I',)
+2024-09-09 19:58:45,486 INFO [Thread-140523536901696] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,486 INFO [Thread-140523536901696] Operation: add_vertex, Args: ('O',)
+2024-09-09 19:58:45,486 INFO [Thread-140523536901696] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,487 INFO [Thread-140523536901696] Operation: add_edge, Args: ('I', 'O')
+2024-09-09 19:58:45,487 INFO [Thread-140523536901696] Operation: add_edge, Result: True
+2024-09-09 19:58:45,487 INFO [Thread-140523528508992] Operation: add_vertex, Args: ('J',)
+2024-09-09 19:58:45,487 INFO [Thread-140523528508992] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,487 INFO [Thread-140523528508992] Operation: add_vertex, Args: ('P',)
+2024-09-09 19:58:45,487 INFO [Thread-140523528508992] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,488 INFO [Thread-140523528508992] Operation: add_edge, Args: ('J', 'P')
+2024-09-09 19:58:45,488 INFO [Thread-140523528508992] Operation: add_edge, Result: True
+2024-09-09 19:58:45,488 INFO [Thread-140523520116288] Operation: add_vertex, Args: ('K',)
+2024-09-09 19:58:45,488 INFO [Thread-140523520116288] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,488 INFO [Thread-140523520116288] Operation: add_vertex, Args: ('Q',)
+2024-09-09 19:58:45,488 INFO [Thread-140523520116288] Operation: add_vertex, Result: False
+2024-09-09 19:58:45,489 INFO [Thread-140523520116288] Operation: add_edge, Args: ('K', 'Q')
+2024-09-09 19:58:45,489 INFO [Thread-140523520116288] Operation: add_edge, Result: True
+2024-09-09 19:58:45,489 INFO [Thread-140524189458432] Operation: get_all_vertices, Args: ()
+2024-09-09 19:58:45,489 INFO [Thread-140524189458432] Operation: get_all_vertices, Result: {'F', 'K', 'H', 'D', 'A', 'T', 'P', 'O', 'Q', 'S', 'R', 'E', 'J', 'L', 'I', 'N', 'G', 'C', 'M', 'B'}
+2024-09-09 19:58:45,489 INFO [Thread-140524189458432] Operation: read_graph_from_file, Result: Graph created with 20 vertices
+2024-09-09 20:03:08,442 ERROR [Thread-140524189458432] Operation: User input invalid command: , Error: fdasjfsk
