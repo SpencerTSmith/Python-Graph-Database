@@ -12,20 +12,20 @@ import threading
 def read_file_portion(graph: Graph, filename: str, start: int, end: int):
     with open(filename, 'r') as file:
         file.seek(start)
-        
+
         # If we're not at the beginning of the file, discard the first (potentially partial) line
         if start > 0:
             file.readline()
-        
+
         while file.tell() < end:
             line = file.readline().strip()
             if not line:
                 continue  # Skip empty lines
-            
+
             parts = line.split()
             if len(parts) != 2:
                 continue  # Skip lines that don't have exactly two vertices
-            
+
             v1, v2 = parts
             graph.add_vertex(v1)
             graph.add_vertex(v2)

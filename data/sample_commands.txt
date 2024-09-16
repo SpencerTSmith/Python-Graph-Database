@@ -15,3 +15,9 @@ remove-vertex Z
 remove-vertex Z
 get-neighborhood A
 get-neighborhood U
+add-edge A B
+add-edge B C
+add-edge C D
+has-path A B C D
+get-all-vertices
+get-all-edges
