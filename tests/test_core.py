@@ -46,12 +46,27 @@ class TestGraphOperations(unittest.TestCase):
         graphO = GraphOperations(graph)
         graphI = GraphOperations(outputGraph)
         self.assertEqual(graph, outputGraph)
+        graph.add_vertex('Test')
+        outputGraph.add_vertex('Test')
+        self.assertEqual(graph, outputGraph)
+        graph.add_edge('Test', 'A')
+        outputGraph.add_edge('Test', 'A')
+        self.assertEqual(graph, outputGraph)
+        graph.remove_edge('Test', 'A')
+        outputGraph.remove_edge('Test', 'A')
+        self.assertEqual(graph, outputGraph)
+        graph.remove_vertex('Test')
+        outputGraph.remove_vertex('Test')
+        self.assertEqual(graph, outputGraph)
+        self.assertEqual(graphO.has_vertex('A'), graphI.has_vertex('A'))
+
         self.assertEqual(graph.get_all_vertices(), outputGraph.get_all_vertices())
         self.assertEqual(graph.has_edge("A", "B"), outputGraph.has_edge("A", "B"))
         self.assertEqual(graphO.get_neighbors("A"), graphI.get_neighbors("A"))
         path0, time = graphO.get_shortest_path("A", "G")
         path1, time1 = graphI.get_shortest_path("A", "G")
         self.assertEqual(path0, path1)
+
 
     def test_remove_edge(self):
 
