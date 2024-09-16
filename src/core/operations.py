@@ -1,5 +1,6 @@
 from src.core.graph import Graph
 from src.algorithms import path_finding
+
 from typing import Tuple, List, Optional
 import time
 from enum import StrEnum
@@ -17,7 +18,6 @@ class Commands(StrEnum):
     GET_SSSP = "get-shortest-path"
     GET_VRTS = "get-all-vertices"
     GET_EDGS = "get-all-edges"
-    
 
 class GraphOperations:
     def __init__(self, graph: Graph):
@@ -41,9 +41,11 @@ class GraphOperations:
     def has_edge(self, v1: str, v2: str) -> bool:
         return self._graph.has_edge(v1, v2)
 
-    def has_path(self, start: str, end: str) -> bool: 
-        path = self.get_shortest_path(start, end)
-        return True if path else False
+    def has_path(self, vertices: List[str]) -> bool: 
+        for i in range(len(vertices) - 1):
+            if not self.has_edge(vertices[i], vertices[i + 1]):
+                return False
+        return True
 
     def get_neighbors(self, v: str) -> Optional[List[str]]:
         neighbors = self._graph.get_neighbors(v)
@@ -51,6 +53,14 @@ class GraphOperations:
 
     def get_all_vertices(self) -> List[str]:
         return list(self._graph.get_all_vertices())
+
+    def get_all_edges(self) -> List[Tuple[str, str]]:
+        all = []
+        for vert, edges in list(self._graph._vertices.items()):
+            for edge in edges:
+                all.append((vert, edge))
+
+        return all
 
     def get_shortest_path(self, start: str, end: str) -> Tuple[Optional[List[str]], float]:
         start_time = time.time()
@@ -90,12 +100,21 @@ class GraphOperations:
                     case Commands.HAS_EDGE:
                         result = self.has_edge(tokens[1], tokens[2])
                         output.write(f"{Commands.HAS_EDGE} {tokens[1]} {tokens[2]} : {str(result)}\n")
+                    case Commands.HAS_PATH:
+                        result = self.has_path(tokens[1:])
+                        output.write(f"{Commands.HAS_PATH} {tokens[1:]} : {str(result)}\n")
                     case Commands.GET_HOOD:
                         neighborhood = self.get_neighbors(tokens[1])
                         output.write(f"{Commands.GET_HOOD} {tokens[1]} : {str(neighborhood)}\n")
                     case Commands.GET_SSSP:
                         path, sp_time = self.get_shortest_path(tokens[1], tokens[2])
                         output.write(f"{Commands.GET_SSSP} {tokens[1]} {tokens[2]} : {str(path)} in {sp_time:.6f} seconds\n")
+                    case Commands.GET_VRTS:
+                        verts = self.get_all_vertices()
+                        output.write(f"{Commands.GET_VRTS} : {verts}\n")
+                    case Commands.GET_EDGS:
+                        edges = self.get_all_edges()
+                        output.write(f"{Commands.GET_EDGS} : {edges}\n")
 
             output.write("\nGraph after commands:\n")
             pprint(self._graph._vertices, stream=output)
