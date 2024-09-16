@@ -49,7 +49,10 @@ class TestGraphOperations(unittest.TestCase):
         self.assertEqual(graph.get_all_vertices(), outputGraph.get_all_vertices())
         self.assertEqual(graph.has_edge("A", "B"), outputGraph.has_edge("A", "B"))
         self.assertEqual(graphO.get_neighbors("A"), graphI.get_neighbors("A"))
-        self.assertEqual(graphO.get_shortest_path("A", "G"), graphI.get_shortest_path("A", "G"))
+        path0, time = graphO.get_shortest_path("A", "G")
+        path1, time1 = graphI.get_shortest_path("A", "G")
+        self.assertEqual(path0, path1)
+
     def test_remove_edge(self):
 
         current_dir = os.path.dirname(os.path.abspath(__file__))
