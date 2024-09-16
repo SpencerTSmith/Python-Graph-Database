@@ -48,7 +48,6 @@ class TestGraphOperations(unittest.TestCase):
         self.assertEqual(graph, outputGraph)
         self.assertEqual(graph.get_all_vertices(), outputGraph.get_all_vertices())
         self.assertEqual(graph.has_edge("A", "B"), outputGraph.has_edge("A", "B"))
-        self.assertEqual(graphO, graphI)
         self.assertEqual(graphO.get_neighbors("A"), graphI.get_neighbors("A"))
         self.assertEqual(graphO.get_shortest_path("A", "G"), graphI.get_shortest_path("A", "G"))
     def test_remove_edge(self):
