@@ -5,6 +5,7 @@ import os
 import networkx as nx
 import matplotlib.pyplot as plt
 from concurrent.futures import ThreadPoolExecutor
+from src.utils.time_tracking import TimeTracking
 from src.utils.logging_utils import log_operation, log_result, log_error
 import threading
 import time
@@ -146,8 +147,11 @@ def main():
     graph = read_graph_from_file(file_path, num_threads=8)
     
     # Create GraphOperations instance
-    ops = GraphOperations(graph)
 
+    log_file_path='event.log'
+
+    ops = GraphOperations(graph)
+    tt= TimeTracking(log_file_path)
     # Initial graph visualization
     print("Initial graph:")
     visualize_graph(graph)

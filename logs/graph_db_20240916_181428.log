@@ -1,0 +1,92 @@
+2024-09-16 18:14:31,698 INFO [Thread-13940] Operation: read_graph_from_file, Args: ('C:\\Users\\DSNRAJU\\OneDrive\\Desktop\\DOS\\lab00_1\\dosfa24lab00team06\\src\\..\\data\\sample_graph.txt',)
+2024-09-16 18:14:31,708 INFO [Thread-25696] Operation: add_vertex, Args: ('A',)
+2024-09-16 18:14:31,709 INFO [Thread-25696] Operation: add_vertex, Result: (True, 1726528471.7099504)
+2024-09-16 18:14:31,709 ERROR [Thread-25696] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,709 INFO [Thread-7912] Operation: add_vertex, Args: ('A',)
+2024-09-16 18:14:31,710 INFO [Thread-7912] Operation: add_vertex, Result: (False, 1726528471.710952)
+2024-09-16 18:14:31,710 ERROR [Thread-7912] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,710 INFO [Thread-25068] Operation: add_vertex, Args: ('B',)
+2024-09-16 18:14:31,710 INFO [Thread-25068] Operation: add_vertex, Result: (True, 1726528471.710952)
+2024-09-16 18:14:31,711 ERROR [Thread-25068] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,711 INFO [Thread-25696] Operation: add_vertex, Args: ('B',)
+2024-09-16 18:14:31,711 INFO [Thread-25696] Operation: add_vertex, Result: (False, 1726528471.7119508)
+2024-09-16 18:14:31,711 ERROR [Thread-25696] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,711 INFO [Thread-18712] Operation: add_vertex, Args: ('C',)
+2024-09-16 18:14:31,712 INFO [Thread-18712] Operation: add_vertex, Result: (True, 1726528471.712952)
+2024-09-16 18:14:31,712 ERROR [Thread-18712] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,712 INFO [Thread-13552] Operation: add_vertex, Args: ('C',)
+2024-09-16 18:14:31,712 INFO [Thread-13552] Operation: add_vertex, Result: (False, 1726528471.712952)
+2024-09-16 18:14:31,712 ERROR [Thread-13552] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,712 INFO [Thread-7912] Operation: add_vertex, Args: ('D',)
+2024-09-16 18:14:31,712 INFO [Thread-7912] Operation: add_vertex, Result: (True, 1726528471.712952)
+2024-09-16 18:14:31,712 ERROR [Thread-7912] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,712 INFO [Thread-1732] Operation: add_vertex, Args: ('E',)
+2024-09-16 18:14:31,712 INFO [Thread-1732] Operation: add_vertex, Result: (True, 1726528471.712952)
+2024-09-16 18:14:31,713 ERROR [Thread-1732] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,713 INFO [Thread-288] Operation: add_vertex, Args: ('F',)
+2024-09-16 18:14:31,713 INFO [Thread-288] Operation: add_vertex, Result: (True, 1726528471.7139516)
+2024-09-16 18:14:31,713 ERROR [Thread-288] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,713 INFO [Thread-25068] Operation: add_vertex, Args: ('G',)
+2024-09-16 18:14:31,713 INFO [Thread-25068] Operation: add_vertex, Result: (True, 1726528471.7139516)
+2024-09-16 18:14:31,713 ERROR [Thread-25068] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,713 INFO [Thread-13480] Operation: add_vertex, Args: ('H',)
+2024-09-16 18:14:31,713 INFO [Thread-13480] Operation: add_vertex, Result: (True, 1726528471.7139516)
+2024-09-16 18:14:31,713 ERROR [Thread-13480] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,713 INFO [Thread-25696] Operation: add_vertex, Args: ('I',)
+2024-09-16 18:14:31,714 INFO [Thread-25696] Operation: add_vertex, Result: (True, 1726528471.7149518)
+2024-09-16 18:14:31,714 ERROR [Thread-25696] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,714 INFO [Thread-18712] Operation: add_vertex, Args: ('J',)
+2024-09-16 18:14:31,714 INFO [Thread-18712] Operation: add_vertex, Result: (True, 1726528471.7149518)
+2024-09-16 18:14:31,714 ERROR [Thread-18712] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,714 INFO [Thread-13552] Operation: add_vertex, Args: ('K',)
+2024-09-16 18:14:31,714 INFO [Thread-13552] Operation: add_vertex, Result: (True, 1726528471.7149518)
+2024-09-16 18:14:31,714 ERROR [Thread-13552] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,714 INFO [Thread-7912] Operation: add_vertex, Args: ('L',)
+2024-09-16 18:14:31,714 INFO [Thread-7912] Operation: add_vertex, Result: (True, 1726528471.7149518)
+2024-09-16 18:14:31,714 ERROR [Thread-7912] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,714 INFO [Thread-1732] Operation: add_vertex, Args: ('M',)
+2024-09-16 18:14:31,715 INFO [Thread-1732] Operation: add_vertex, Result: (True, 1726528471.7159517)
+2024-09-16 18:14:31,715 ERROR [Thread-1732] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,715 INFO [Thread-288] Operation: add_vertex, Args: ('N',)
+2024-09-16 18:14:31,715 INFO [Thread-288] Operation: add_vertex, Result: (True, 1726528471.7159517)
+2024-09-16 18:14:31,715 ERROR [Thread-288] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,715 INFO [Thread-25068] Operation: add_vertex, Args: ('O',)
+2024-09-16 18:14:31,715 INFO [Thread-25068] Operation: add_vertex, Result: (True, 1726528471.7159517)
+2024-09-16 18:14:31,715 ERROR [Thread-25068] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,715 INFO [Thread-13480] Operation: add_vertex, Args: ('P',)
+2024-09-16 18:14:31,715 INFO [Thread-13480] Operation: add_vertex, Result: (True, 1726528471.7159517)
+2024-09-16 18:14:31,715 ERROR [Thread-13480] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,715 INFO [Thread-25696] Operation: add_vertex, Args: ('A',)
+2024-09-16 18:14:31,716 INFO [Thread-25696] Operation: add_vertex, Result: (False, 1726528471.7159517)
+2024-09-16 18:14:31,716 ERROR [Thread-25696] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,716 INFO [Thread-18712] Operation: add_vertex, Args: ('B',)
+2024-09-16 18:14:31,716 INFO [Thread-18712] Operation: add_vertex, Result: (False, 1726528471.7169514)
+2024-09-16 18:14:31,716 ERROR [Thread-18712] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,716 INFO [Thread-13552] Operation: add_vertex, Args: ('C',)
+2024-09-16 18:14:31,716 INFO [Thread-13552] Operation: add_vertex, Result: (False, 1726528471.7169514)
+2024-09-16 18:14:31,716 ERROR [Thread-13552] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,716 INFO [Thread-7912] Operation: add_vertex, Args: ('D',)
+2024-09-16 18:14:31,716 INFO [Thread-7912] Operation: add_vertex, Result: (False, 1726528471.7169514)
+2024-09-16 18:14:31,716 ERROR [Thread-7912] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,717 INFO [Thread-1732] Operation: add_vertex, Args: ('E',)
+2024-09-16 18:14:31,717 INFO [Thread-1732] Operation: add_vertex, Result: (False, 1726528471.7179525)
+2024-09-16 18:14:31,717 ERROR [Thread-1732] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,717 INFO [Thread-288] Operation: add_vertex, Args: ('F',)
+2024-09-16 18:14:31,717 INFO [Thread-288] Operation: add_vertex, Result: (False, 1726528471.7179525)
+2024-09-16 18:14:31,717 ERROR [Thread-288] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,717 INFO [Thread-25068] Operation: add_vertex, Args: ('G',)
+2024-09-16 18:14:31,717 INFO [Thread-25068] Operation: add_vertex, Result: (False, 1726528471.7179525)
+2024-09-16 18:14:31,717 ERROR [Thread-25068] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,717 INFO [Thread-13480] Operation: add_vertex, Args: ('H',)
+2024-09-16 18:14:31,717 INFO [Thread-13480] Operation: add_vertex, Result: (False, 1726528471.7179525)
+2024-09-16 18:14:31,717 ERROR [Thread-13480] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,718 INFO [Thread-25696] Operation: add_vertex, Args: ('I',)
+2024-09-16 18:14:31,718 INFO [Thread-25696] Operation: add_vertex, Result: (False, 1726528471.718951)
+2024-09-16 18:14:31,718 ERROR [Thread-25696] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,718 INFO [Thread-18712] Operation: add_vertex, Args: ('J',)
+2024-09-16 18:14:31,718 INFO [Thread-18712] Operation: add_vertex, Result: (False, 1726528471.718951)
+2024-09-16 18:14:31,718 ERROR [Thread-18712] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,718 INFO [Thread-13552] Operation: add_vertex, Args: ('K',)
+2024-09-16 18:14:31,718 INFO [Thread-13552] Operation: add_vertex, Result: (False, 1726528471.718951)
+2024-09-16 18:14:31,718 ERROR [Thread-13552] Operation: read_graph_from_file, Error: Error processing line: TimeTracking.get_lamport_times() missing 1 required positional argument: 'self'
+2024-09-16 18:14:31,718 ERROR [Thread-13940] Operation: read_graph_from_file, Error: Error reading file: 'GraphOperations' object has no attribute 'get_all_vertices'
