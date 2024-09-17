@@ -1,10 +1,13 @@
 from typing import Dict, Set, Optional
-import threading
+from multiprocessing import Lock
 
 class Graph:
-    def __init__(self):
-        self._vertices: Dict[str, Set[str]] = {}
-        self._lock = threading.Lock()
+    def __init__(self, shared_dict=None):
+        if shared_dict is None:
+            self._vertices = {}
+        else:
+            self._vertices = shared_dict
+        self._lock = Lock()
 
     def add_vertex(self, v: str) -> bool:
         with self._lock:
@@ -17,7 +20,6 @@ class Graph:
         with self._lock:
             if v1 in self._vertices and v2 in self._vertices:
                 self._vertices[v1].add(v2)
-                #self._vertices[v2].add(v1)  # remove first comment symbol for undirected graph
                 return True
             return False
 
@@ -37,23 +39,6 @@ class Graph:
                 self._vertices[v2].discard(v1)
                 return True
             return False
-
-
-    def __eq__(self, other) ->bool:
-        if not isinstance(other, Graph):
-            return False
-
-        if len(self._vertices) != len(other._vertices):
-            return False
-
-        for vertex in self._vertices:
-            if vertex not in other._vertices:
-                return False
-            if self._vertices[vertex] != other._vertices[vertex]:
-                return False
-        return True
-        
-
 
     def has_vertex(self, v: str) -> bool:
         with self._lock:

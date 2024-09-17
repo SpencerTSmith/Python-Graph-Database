@@ -1,0 +1,87 @@
+syntax = "proto3";
+
+package graphdb;
+
+service GraphService {
+  // Vertex operations
+  rpc AddVertex (AddVertexRequest) returns (OperationResponse) {}
+  rpc RemoveVertex (VertexRequest) returns (OperationResponse) {}
+  rpc HasVertex (VertexRequest) returns (BooleanResponse) {}
+  rpc GetAllVertices (EmptyRequest) returns (VertexListResponse) {}
+
+  // Edge operations
+  rpc AddEdge (AddEdgeRequest) returns (OperationResponse) {}
+  rpc RemoveEdge (EdgeRequest) returns (OperationResponse) {}
+  rpc HasEdge (EdgeRequest) returns (BooleanResponse) {}
+
+  // Neighborhood operations
+  rpc GetNeighbors (VertexRequest) returns (VertexListResponse) {}
+
+  // Path operations
+  rpc GetShortestPath (PathRequest) returns (PathResponse) {}
+
+  // Additional operations
+  rpc ExecuteCommands (CommandsRequest) returns (CommandsResponse) {}
+}
+
+message EmptyRequest {}
+
+message VertexRequest {
+  string vertex = 1;
+}
+
+message AddVertexRequest {
+  string vertex = 1;
+}
+
+message EdgeRequest {
+  string vertex1 = 1;
+  string vertex2 = 2;
+}
+
+message AddEdgeRequest {
+  string vertex1 = 1;
+  string vertex2 = 2;
+}
+
+message PathRequest {
+  string start = 1;
+  string end = 2;
+}
+
+message OperationResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+message BooleanResponse {
+  bool value = 1;
+}
+
+message VertexListResponse {
+  repeated string vertices = 1;
+}
+
+message PathResponse {
+  repeated string path = 1;
+  double time = 2;
+}
+
+message Command {
+  string operation = 1;
+  repeated string parameters = 2;
+}
+
+message CommandsRequest {
+  repeated Command commands = 1;
+}
+
+message CommandResult {
+  string operation = 1;
+  string result = 2;
+}
+
+message CommandsResponse {
+  repeated CommandResult results = 1;
+  double total_time = 2;
+}

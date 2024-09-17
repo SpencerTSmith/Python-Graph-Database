@@ -100014,8 +100014,8 @@ remove-edge A B : success
 has-edge A B : False
 remove-vertex Z : success
 remove-vertex Z : fail
-get-neighborhood A : ['\\S', 'aD', '^N', 'QZ', 'eF', '^D', 'YS', 'aT', 'NS', 'AK', '`D', '[S', 'IA', '\\J', 'WV', 'BY', 'eA', 'CE', '_B', '^K', 'AJ', 'NX', 'NC', 'PB', 'eP', 'ME', 'QV', 'QN', 'bZ', '^H', 'DE', 'eW', 'M', 'YB', 'eI', 'HG', ']N', 'JF', 'SW', 'QD', 'ID', '\\A', 'fE', 'DC', 'YH', 'cS', 'QF', 'FW', 'JH', 'QB', 'HR', 'EG', 'ZI', 'aG', 'IS', 'aQ', 'ZL', 'AM', 'CO', 'QH', 'XY', 'RM', 'QW', 'eJ', 'KM', 'cT', 'XE', 'cD', '`U', 'U', 'FT', 'DU', 'EU', 'GR', 'eQ', '\\I', 'DJ', 'RL', 'EF', 'eC', 'ZC', 'IK', '`Z', 'WA', ']A', '_U', 'NO', 'cC', 'BW', 'XB', 'NQ', 'GA', 'RB', 'aK', 'FM', 'DF', 'WG', 'XI', 'MB', 'dX', 'NL', 'eN', 'FN', 'ZS', 'O', 'UG', 'DZ', '`E', 'HL', 'BU', 'eU']
-get-neighborhood U : ['XH', 'WD', 'AA', '\\P', 'II', 'DL', 'XW', 'ML', 'WP', '\\J', 'dI', '`O', 'F', '_V', '_B', 'LW', 'QV', '_P', 'FE', 'dT', 'PV', 'FR', 'SJ', 'IV', 'eV', 'LR', 'AW', 'DP', 'IM', 'VG', ']V', 'CN', 'QT', 'eW', 'ET', 'RC', 'YB', 'EY', 'S', 'KR', 'MA', 'SW', 'G', 'QD', 'ID', 'fJ', 'YH', 'FJ', 'bA', 'XO', 'QF', 'EQ', 'JJ', 'PA', 'HS', 'N', 'RT', 'MV', 'V', 'DS', 'ZM', 'aI', 'TL', 'YT', 'RM', '[I', 'eH', 'cT', 'KM', 'LM', 'HX', 'aO', 'cM', 'YD', 'ZQ', 'QA', ']L', 'WF', 'KK', 'IU', 'DQ', '[M', 'BF', 'SZ', 'eQ', 'EZ', 'EC', 'WI', 'AD', '_U', 'BR', 'XB', 'OC', 'IX', 'NH', 'RB', 'DF', '_H', 'EI', 'eY', 'MB', 'cG', 'dX', 'KU', 'EE', 'aF', 'RU', 'QL', 'ZX', '^A', ']E', 'UK', 'KA', 'YK', 'OA', 'PG', '`F']
+get-neighborhood A : ['`Z', 'eN', 'eU', 'ZS', 'RM', 'aD', '^N', 'EU', 'ME', 'YH', 'QD', '\\A', 'cD', 'O', 'aT', '^D', 'eQ', 'bZ', 'eF', 'RB', 'QN', 'eA', '^K', 'dX', 'DJ', 'cC', 'NS', 'WA', 'UG', 'ZL', 'PB', 'BU', 'QV', 'eC', 'QW', 'MB', 'IK', 'U', 'aK', 'DZ', 'eW', 'DE', 'eJ', 'DF', 'EG', 'FN', '_U', 'XI', ']N', 'NX', '\\J', '_B', 'IA', 'QB', 'NC', 'WV', 'AM', 'WG', 'FW', 'aQ', 'fE', 'M', 'NO', ']A', 'YS', 'XY', 'AK', 'QF', '\\I', 'JH', '`D', 'XE', 'cT', 'SW', 'RL', 'CO', '`U', 'eI', 'NL', 'HR', 'HL', 'XB', 'FT', '^H', 'GR', 'CE', 'DC', 'KM', 'DU', 'ID', '`E', 'NQ', 'YB', 'BY', 'QZ', 'eP', 'cS', 'ZC', 'IS', 'QH', 'ZI', 'BW', '\\S', 'aG', 'EF', 'GA', 'HG', 'FM', '[S', 'AJ', 'JF']
+get-neighborhood U : ['cM', 'DL', ']L', 'RM', 'MA', 'IV', 'EZ', 'YH', 'II', 'RC', 'IU', 'BR', 'QD', 'DS', 'aI', 'KK', 'cG', 'eQ', '[M', 'WP', 'OC', 'RB', 'ET', 'WD', 'bA', 'dX', 'WF', 'LR', 'YD', 'aO', 'IX', 'UK', 'PG', 'QV', 'DP', 'PA', 'MB', 'QL', 'fJ', ']V', 'aF', 'IM', '^A', 'eW', 'EY', 'ML', 'N', 'DF', '[I', 'HS', '_U', 'HX', 'RT', '\\J', 'ZX', '_B', 'KR', 'MV', 'KU', 'DQ', 'eV', 'KA', 'OA', 'ZM', 'QT', 'QF', 'EC', '`O', '_H', 'S', 'G', 'cT', '_P', 'F', 'SW', 'FE', 'FR', 'EE', 'VG', 'SJ', 'PV', 'JJ', 'AD', 'dT', 'XB', 'XH', ']E', 'AA', '`F', 'KM', 'SZ', 'TL', 'WI', 'XO', 'ID', 'CN', 'QA', 'YB', '_V', 'YT', 'EI', 'BF', 'XW', 'AW', '\\P', 'NH', 'YK', 'EQ', 'dI', 'eH', 'V', 'LM', 'RU', 'eY', 'ZQ', 'LW', 'FJ']
 
 Graph after commands:
 {'A': {'AJ',
@@ -199827,4 +199827,4 @@ Graph after commands:
         'eK',
         'eU',
         'eW'}}
-Executed all commands in: 0.501486
+Executed all commands in: 0.360872

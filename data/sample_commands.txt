@@ -1,17 +1,17 @@
-add-vertex Z
-add-vertex A
-add-vertex U
-add-vertex Q
-add-edge U Z
-add-edge Z U
-has-vertex A
-has-vertex B
-has-edge A B
-has-edge B U
-remove-edge U Z
-remove-edge A B
-has-edge A B
-remove-vertex Z
-remove-vertex Z
-get-neighborhood A
-get-neighborhood U
+add_vertex Z
+add_vertex A
+add_vertex U
+add_vertex Q
+add_edge U Z
+add_edge Z U
+has_vertex A
+has_vertex B
+has_edge A B
+has_edge B U
+remove_edge U Z
+remove_edge A B
+has_edge A B
+remove_vertex Z
+remove_vertex Z
+get_neighborhood A
+get_neighborhood U
