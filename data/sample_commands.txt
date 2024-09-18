@@ -1,0 +1,23 @@
+add-vertex Z
+add-vertex A
+add-vertex U
+add-vertex Q
+add-edge U Z
+add-edge Z U
+has-vertex A
+has-vertex B
+has-edge A B
+has-edge B U
+remove-edge U Z
+remove-edge A B
+has-edge A B
+remove-vertex Z
+remove-vertex Z
+get-neighborhood A
+get-neighborhood U
+add-edge A B
+add-edge B C
+add-edge C D
+has-path A B C D
+get-all-vertices
+get-all-edges

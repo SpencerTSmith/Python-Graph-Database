@@ -42,7 +42,7 @@ def read_graph_from_file(filename: str, num_threads: int = 4) -> Graph:
         log_error("read_graph_from_file", f"Error reading file: {str(e)}")
         raise
 
-def visualize_graph(graph: Graph, path: list = None):
+def visualize_graph(graph: Graph, path: list = []):
     G = nx.Graph()
     for vertex in graph.get_all_vertices():
         G.add_node(vertex)
@@ -87,56 +87,41 @@ def execute_command(ops: GraphOperations, command: str):
     cmd = parts[0].lower()
     args = parts[1:]
 
-    try:
-        if cmd == "add_vertex" and len(args) == 1:
-            result = ops.parallel_operation(ops.add_vertex, args[0])
-            print(f"Add vertex result: {result}")
-            print(f"Unix completion time: {time.time()}")
-        elif cmd == "add_edge" and len(args) == 2:
-            result = ops.parallel_operation(ops.add_edge, args[0], args[1])
-            print(f"Add edge result: {result}")
-            print(f"Unix completion time: {time.time()}")
-        elif cmd == "remove_vertex" and len(args) == 1:
-            result = ops.parallel_operation(ops.remove_vertex, args[0])
-            print(f"Remove vertex result: {result}")
-            print(f"Unix completion time: {time.time()}")
-        elif cmd == "remove_edge" and len(args) == 2:
-            result = ops.parallel_operation(ops.remove_edge, args[0], args[1])
-            print(f"Remove edge result: {result}")
-            print(f"Unix completion time: {time.time()}")
-        elif cmd == "has_vertex" and len(args) == 1:
-            result = ops.parallel_operation(ops.has_vertex, args[0])
-            print(f"Has vertex result: {result}")
-            print(f"Unix completion time: {time.time()}")
-        elif cmd == "has_edge" and len(args) == 2:
-            result = ops.parallel_operation(ops.has_edge, args[0], args[1])
-            print(f"Has edge result: {result}")
-            print(f"Unix completion time: {time.time()}")
-        elif cmd == "get_neighbors" and len(args) == 1:
-            result = ops.parallel_operation(ops.get_neighbors, args[0])
-            print(f"Neighbors: {result}")
-            print(f"Unix completion time: {time.time()}")
-        elif cmd == "get_all_vertices" and len(args) == 0:
-            result = ops.parallel_operation(ops.get_all_vertices)
-            print(f"All vertices: {result}")
-            print(f"Unix completion time: {time.time()}")
-        elif cmd == "get_shortest_path" and len(args) == 2:
-            path, time_taken = ops.get_shortest_path(args[0], args[1])
-            if path:
-                print(f"Shortest path from {args[0]} to {args[1]}: {' -> '.join(path)}")
-                print(f"Time taken: {time_taken:.6f} seconds")
-                print(f"Unix completion time: {time.time()}")
-            else:
-                print(f"No path found from {args[0]} to {args[1]}")
-                print(f"Unix completion time: {time.time()}")
-        elif cmd == "visualize" and len(args) == 0:
-            visualize_graph(ops.graph)
+    if cmd == "add_vertex" and len(args) == 1:
+        result = ops.add_vertex(args[0])
+        print(f"Add vertex result: {result}")
+    elif cmd == "add_edge" and len(args) == 2:
+        result = ops.add_edge(args[0], args[1])
+        print(f"Add edge result: {result}")
+    elif cmd == "remove_vertex" and len(args) == 1:
+        result = ops.remove_vertex(args[0])
+        print(f"Remove vertex result: {result}")
+    elif cmd == "remove_edge" and len(args) == 2:
+        result = ops.remove_edge(args[0], args[1])
+        print(f"Remove edge result: {result}")
+    elif cmd == "has_vertex" and len(args) == 1:
+        result = ops.has_vertex(args[0])
+        print(f"Has vertex result: {result}")
+    elif cmd == "has_edge" and len(args) == 2:
+        result = ops.has_edge(args[0], args[1])
+        print(f"Has edge result: {result}")
+    elif cmd == "get_neighbors" and len(args) == 1:
+        result = ops.get_neighbors(args[0])
+        print(f"Neighbors: {result}")
+    elif cmd == "get_all_vertices" and len(args) == 0:
+        result = ops.get_all_vertices()
+        print(f"All vertices: {result}")
+    elif cmd == "get_shortest_path" and len(args) == 2:
+        path, time_taken = ops.get_shortest_path(args[0], args[1])
+        if path:
+            print(f"Shortest path from {args[0]} to {args[1]}: {' -> '.join(path)}")
+            print(f"Time taken: {time_taken:.6f} seconds")
         else:
-            print("Invalid command or wrong number of arguments")
-            log_error("User input invalid command: ", cmd)
-    except Exception as e:
-        print(f"An error occurred: {str(e)}")
-        log_error("Error occured when inputting command: ", cmd)
+            print(f"No path found from {args[0]} to {args[1]}")
+    elif cmd == "visualize" and len(args) == 0:
+        visualize_graph(ops._graph)
+    else:
+        print("Invalid command or wrong number of arguments")
 
 def main():
     # Get the absolute path to the sample_graph.txt file

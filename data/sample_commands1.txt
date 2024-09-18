@@ -1,0 +1,53 @@
+add-vertex Z
+add-vertex A
+add-vertex U
+add-vertex Q
+add-edge U Z
+add-edge Z U
+has-vertex A
+has-vertex B
+has-edge A B
+has-edge B U
+remove-edge U Z
+remove-edge A B
+has-edge A B
+remove-vertex Z
+remove-vertex Z
+get-neighborhood A
+get-neighborhood U
+get-shortest-path A G
+get-shortest-path U B
+get-shortest-path H N
+get-shortest-path Y H
+get-shortest-path S P
+get-shortest-path F B
+get-shortest-path P D
+get-shortest-path O Z
+get-shortest-path Q J
+get-shortest-path O P
+get-shortest-path F T
+get-shortest-path D E
+get-shortest-path P X
+get-shortest-path Y R
+get-shortest-path K T
+get-shortest-path W B
+get-shortest-path P L
+get-shortest-path I B
+get-shortest-path L J
+get-shortest-path R P
+get-shortest-path K N
+get-shortest-path K A
+get-shortest-path D F
+get-shortest-path V L
+get-shortest-path F E
+get-shortest-path G E
+get-shortest-path L N
+get-shortest-path R S
+get-shortest-path L W
+get-shortest-path Q I
+get-shortest-path A Y
+get-shortest-path P F
+get-shortest-path B P
+get-shortest-path D P
+get-shortest-path Y F
+get-shortest-path G Q

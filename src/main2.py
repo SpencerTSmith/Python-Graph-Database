@@ -15,7 +15,7 @@ def read_graph_from_file(filename: str) -> Graph:
             graph.add_edge(v1, v2)
     return graph
 
-def visualize_graph(graph: Graph, path: list = None):
+def visualize_graph(graph: Graph, path: list = []):
     G = nx.Graph()
     for vertex in graph.get_all_vertices():
         G.add_node(vertex)
@@ -40,7 +40,7 @@ def visualize_graph(graph: Graph, path: list = None):
 def main():
     # Get the absolute path to the sample_graph.txt file
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(current_dir, '..', 'data', 'sample_graph.txt')
+    file_path = os.path.join(current_dir, '..', 'data', 'sample_graph2.txt')
 
     # Read graph from file
     graph = read_graph_from_file(file_path)
