@@ -1,6 +1,7 @@
 #use command python -m src.main3
 from src.core.graph import Graph
 from src.core.operations import GraphOperations
+from src.utils.logging_utils import log_operation, log_result, log_error
 import os
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -55,6 +56,7 @@ def execute_command(ops: GraphOperations, command: str):
     parts = command.split()
     if not parts:
         print("Invalid command")
+        log_error(cmd, "User input invalid command: " )
         return
 
     cmd = parts[0].lower()
@@ -95,6 +97,7 @@ def execute_command(ops: GraphOperations, command: str):
         visualize_graph(ops._graph)
     else:
         print("Invalid command or wrong number of arguments")
+        log_error(cmd, "User input invalid command: " )
 
 def main():
     # Get the absolute path to the sample_graph.txt file
@@ -116,12 +119,15 @@ def main():
         print_menu()
         command = input("Enter a command (or 'quit' to exit): ")
         
+        
         if command.lower() == 'quit':
+            log_result("quit", "program attempting to exit")
             break
         
         execute_command(ops, command)
 
     print("Thank you for using the Graph Operations program!")
+    log_result("quit", "program successfully exited")
 
 if __name__ == "__main__":
     main()
