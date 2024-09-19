@@ -1,0 +1,4 @@
+2024-09-18 20:25:18,366 INFO [Thread-25976] Operation: add_vertex, Args: ('Z',)
+2024-09-18 20:25:18,367 INFO [Thread-25976] Operation: add_vertex, Result: (True, 1726709118.3674526)
+2024-09-18 20:29:50,091 INFO [Thread-25976] Operation: has_vertex, Args: ('Z',)
+2024-09-18 20:29:50,092 INFO [Thread-25976] Operation: has_vertex, Result: (True, 1726709390.092577)

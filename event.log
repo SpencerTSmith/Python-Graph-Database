@@ -1,12 +1,6 @@
 Action: add vertex
-Start Time (Unix): 1726532146.7483933
-End Time (Unix): 1726532146.7483933
+Start Time (Unix): 1726709540.643212
+End Time (Unix): 1726709540.643212
 Duration: 0.000000 seconds
 Lamport Clock Time: 1
-----------------------------------------
-Action:  get all vertices
-Start Time (Unix): 1726532191.1749878
-End Time (Unix): 1726532191.1749878
-Duration: 0.000000 seconds
-Lamport Clock Time: 2
 ----------------------------------------

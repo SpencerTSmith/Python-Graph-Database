@@ -11,7 +11,6 @@ class GraphOperations:
     def __init__(self, graph: Graph):
         self.graph = graph
         self.lock = threading.Lock()
-        #self._log_file=log_file
         self.executor = ThreadPoolExecutor(max_workers=4)  # Adjust the number of workers as needed
         self.lamport_clock=TimeTracking()
     

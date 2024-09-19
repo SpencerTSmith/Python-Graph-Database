@@ -1,6 +1,6 @@
 #use command python -m src.main3
 from src.core.graph import Graph
-from src.core.operations2 import GraphOperations
+from src.core.operations import GraphOperations
 import os
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -10,37 +10,15 @@ from src.utils.logging_utils import log_operation, log_result, log_error
 import threading
 import time
 
-def read_graph_from_file(filename: str, num_threads: int = 4) -> Graph:
+def read_graph_from_file(filename: str) -> Graph:
     graph = Graph()
-    ops = GraphOperations(graph)
-    log_operation("read_graph_from_file", filename)
-    
-    lock = threading.Lock()
-    
-    def process_line(line):
-        try:
+    with open(filename, 'r') as f:
+        for line in f:
             v1, v2 = line.strip().split()
-            with lock:
-                ops.add_vertex(v1)
-                ops.add_vertex(v2)
-                ops.add_edge(v1, v2)
-        except ValueError:
-            log_error("read_graph_from_file", f"Invalid line format: {line.strip()}")
-        except Exception as e:
-            log_error("read_graph_from_file", f"Error processing line: {str(e)}")
-
-    try:
-        with open(filename, 'r') as f:
-            lines = f.readlines()
-        
-        with ThreadPoolExecutor(max_workers=num_threads) as executor:
-            executor.map(process_line, lines)
-        
-        log_result("read_graph_from_file", f"Graph created with {len(ops.get_all_vertices())} vertices")
-        return graph
-    except Exception as e:
-        log_error("read_graph_from_file", f"Error reading file: {str(e)}")
-        raise
+            graph.add_vertex(v1)
+            graph.add_vertex(v2)
+            graph.add_edge(v1, v2)
+    return graph
 
 def visualize_graph(graph: Graph, path: list = []):
     G = nx.Graph()
@@ -119,7 +97,7 @@ def execute_command(ops: GraphOperations, command: str):
         else:
             print(f"No path found from {args[0]} to {args[1]}")
     elif cmd == "visualize" and len(args) == 0:
-        visualize_graph(ops._graph)
+        visualize_graph(ops.graph)
     else:
         print("Invalid command or wrong number of arguments")
 
@@ -129,7 +107,7 @@ def main():
     file_path = os.path.join(current_dir, '..', 'data', 'sample_graph.txt')
 
     # Read graph from file
-    graph = read_graph_from_file(file_path, num_threads=8)
+    graph = read_graph_from_file(file_path)
     
     # Create GraphOperations instance
 
