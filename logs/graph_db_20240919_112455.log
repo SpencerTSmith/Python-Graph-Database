@@ -1,0 +1,115 @@
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex A, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex B, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_edge A -> B, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex A, Result: False Vertex already in graph 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex C, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_edge A -> C, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex B, Result: False Vertex already in graph 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex D, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_edge B -> D, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex B, Result: False Vertex already in graph 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex E, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_edge B -> E, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex C, Result: False Vertex already in graph 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex F, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_edge C -> F, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex C, Result: False Vertex already in graph 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex G, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_edge C -> G, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex D, Result: False Vertex already in graph 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex H, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_edge D -> H, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex E, Result: False Vertex already in graph 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex I, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_edge E -> I, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex F, Result: False Vertex already in graph 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex J, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_edge F -> J, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex G, Result: False Vertex already in graph 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex K, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_edge G -> K, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex H, Result: False Vertex already in graph 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex L, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_edge H -> L, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex I, Result: False Vertex already in graph 1726763096.383506
+2024-09-19 11:24:56,383 INFO [Thread-35824] Operation: add_vertex M, Result: True completed at 1726763096.383506
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge I -> M, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex J, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex N, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge J -> N, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex K, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex O, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge K -> O, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex L, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex P, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge L -> P, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex M, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex Q, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge M -> Q, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex N, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex R, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge N -> R, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex O, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex S, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge O -> S, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex P, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex T, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge P -> T, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex A, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex D, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge A -> D, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex B, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex F, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge B -> F, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex C, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex H, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge C -> H, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex D, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex J, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge D -> J, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex E, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex K, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge E -> K, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex F, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex L, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge F -> L, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex G, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex M, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge G -> M, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex H, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex N, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge H -> N, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex I, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex O, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge I -> O, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex J, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex P, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge J -> P, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex K, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_vertex Q, Result: False Vertex already in graph 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: add_edge K -> Q, Result: True completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_all_vertices, Result: dict_keys(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T']) completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors B, Result: {'E', 'D', 'F'} completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors F, Result: {'J', 'L'} completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors S, Result: set() completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors O, Result: {'S'} completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors R, Result: set() completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors H, Result: {'N', 'L'} completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors N, Result: {'R'} completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors C, Result: {'H', 'F', 'G'} completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors P, Result: {'T'} completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors J, Result: {'N', 'P'} completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors D, Result: {'H', 'J'} completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors K, Result: {'Q', 'O'} completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors G, Result: {'K', 'M'} completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors Q, Result: set() completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors I, Result: {'M', 'O'} completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors E, Result: {'I', 'K'} completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors L, Result: {'P'} completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors A, Result: {'B', 'D', 'C'} completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors T, Result: set() completed at 1726763096.391505
+2024-09-19 11:24:56,391 INFO [Thread-35824] Operation: get_neighbors M, Result: {'Q'} completed at 1726763096.391505
+2024-09-19 11:25:06,190 ERROR [Thread-35824] Operation: ;fldafk, Error: User input invalid command: 1726763106.190031
+2024-09-19 11:25:07,486 ERROR [Thread-35824] Operation: dfjalglg, Error: User input invalid command: 1726763107.4860353
+2024-09-19 11:25:09,214 INFO [Thread-35824] Operation: quit, Result: program attempting to exit 1726763109.2141376
+2024-09-19 11:25:09,214 INFO [Thread-35824] Operation: quit, Result: program successfully exited 1726763109.2141376

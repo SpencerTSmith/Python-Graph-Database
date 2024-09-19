@@ -57,7 +57,7 @@ def execute_command(ops: GraphOperations, command: str):
     parts = command.split()
     if not parts:
         print("Invalid command")
-        log_error(cmd, "User input invalid command: " )
+        log_error(cmd, f"User input invalid command: {time.time()} " )
         return
 
     cmd = parts[0].lower()
@@ -98,7 +98,7 @@ def execute_command(ops: GraphOperations, command: str):
         visualize_graph(ops._graph)
     else:
         print("Invalid command or wrong number of arguments")
-        log_error(cmd, "User input invalid command: " )
+        log_error(cmd, f"User input invalid command: {time.time()}" )
 
 def main():
     # Get the absolute path to the sample_graph.txt file
