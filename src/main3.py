@@ -1,13 +1,11 @@
 #use command python -m src.main3
 from src.core.graph import Graph
 from src.core.operations import GraphOperations
+from src.utils.logging_utils import log_result, log_error
 import os
 import networkx as nx
 import matplotlib.pyplot as plt
-from concurrent.futures import ThreadPoolExecutor
 from src.utils.time_tracking import TimeTracking
-from src.utils.logging_utils import log_operation, log_result, log_error
-import threading
 import time
 
 def read_graph_from_file(filename: str) -> Graph:
@@ -60,6 +58,7 @@ def execute_command(ops: GraphOperations, command: str):
     parts = command.split()
     if not parts:
         print("Invalid command")
+        log_error(cmd, f"User input invalid command: {time.time()} " )
         return
 
     cmd = parts[0].lower()
@@ -100,6 +99,7 @@ def execute_command(ops: GraphOperations, command: str):
         visualize_graph(ops.graph)
     else:
         print("Invalid command or wrong number of arguments")
+        log_error(cmd, f"User input invalid command: {time.time()}" )
 
 def main():
     # Get the absolute path to the sample_graph.txt file
@@ -124,12 +124,15 @@ def main():
         print_menu()
         command = input("Enter a command (or 'quit' to exit): ")
         
+        
         if command.lower() == 'quit':
+            log_result("quit", f"program attempting to exit {time.time()}")
             break
         
         execute_command(ops, command)
 
     print("Thank you for using the Graph Operations program!")
+    log_result("quit", f"program successfully exited {time.time()}")
 
 if __name__ == "__main__":
     main()
