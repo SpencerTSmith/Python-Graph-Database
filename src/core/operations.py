@@ -137,7 +137,7 @@ class GraphOperations:
 
         log_operation("get_shortest_path", start, end)
         start_time = time.time()
-        graph_dict = {v: self._graph.get_neighbors(v) for v in self.graph.get_all_vertices()}
+        graph_dict = {v: self._graph.get_neighbors(v) for v in self._graph.get_all_vertices()}
         path= path_finding.bfs_shortest_path(graph_dict, start, end)
 
         #future = self.executor.submit(path_finder)
