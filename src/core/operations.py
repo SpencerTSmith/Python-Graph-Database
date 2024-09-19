@@ -23,36 +23,30 @@ class GraphOperations:
     def __init__(self, graph: Graph):
         self._graph = graph
 
-    def add_vertex(self, v: str) -> bool:
-        result =  self._graph.add_vertex(v)
-        log_result(f"add_vertex {v}", (f"{result} completed at {time.time()}"))
-        return result
+    def add_vertex(self, v: str) -> bool: 
+        #log_result(f"add_vertex {v}", (f"{result} completed at {time.time()}"))
+        return self._graph.add_vertex(v)
         
 
     def add_edge(self, v1: str, v2: str) -> bool:
-        result = self._graph.add_edge(v1, v2)
-        log_result(f"add_edge {v1} -> {v2}", (f"{result} completed at {time.time()}"))
-        return result
+        #log_result(f"add_edge {v1} -> {v2}", (f"{result} completed at {time.time()}"))
+        return self._graph.add_edge(v1, v2)
 
     def remove_vertex(self, v: str) -> bool:
-        result = self._graph.remove_vertex(v)
-        log_result(f"remove_vertex {v}", (f"{result} completed at {time.time()}"))
-        return result
+        #log_result(f"remove_vertex {v}", (f"{result} completed at {time.time()}"))
+        return self._graph.remove_vertex(v)
 
     def remove_edge(self, v1: str, v2: str) -> bool:
-        result = self._graph.remove_edge(v1, v2)
-        log_result(f"remove_edge {v1} {v2}", (f"{result} completed at {time.time()}"))
-        return result
+        #log_result(f"remove_edge {v1} {v2}", (f"{result} completed at {time.time()}"))
+        return self._graph.remove_edge(v1, v2)
 
     def has_vertex(self, v: str) -> bool:
-        result = self._graph.has_vertex(v)
-        log_result(f"has_vertex {v}", (f"{result} completed at {time.time()}"))
-        return result
+        #log_result(f"has_vertex {v}", (f"{result} completed at {time.time()}"))
+        return self._graph.has_vertex(v)
 
     def has_edge(self, v1: str, v2: str) -> bool:
-        result = self._graph.has_edge(v1, v2)
-        log_result(f"has_edge {v1} {v2}", (f"{result} completed at {time.time()}"))
-        return result
+        #log_result(f"has_edge {v1} {v2}", (f"{result} completed at {time.time()}"))
+        return self._graph.has_edge(v1, v2)
 
     def has_path(self, vertices: List[str]) -> bool: 
         for i in range(len(vertices) - 1):
@@ -66,12 +60,12 @@ class GraphOperations:
 
     def get_neighbors(self, v: str) -> Optional[List[str]]:
         neighbors = self._graph.get_neighbors(v)
-        log_result(f"get_neighbors {str}", (f"{neighbors} completed at {time.time()}"))
+        #log_result(f"get_neighbors {v}", (f"{neighbors} completed at {time.time()}"))
         return list(neighbors) if neighbors is not None else None
 
     def get_all_vertices(self) -> List[str]:
         vertices = self._graph.get_all_vertices()
-        log_result(f"get_all_vertices", (f"{vertices} completed at {time.time()}"))
+        #log_result(f"get_all_vertices", (f"{vertices} completed at {time.time()}"))
         return list(vertices)
 
     def get_all_edges(self) -> List[Tuple[str, str]]:

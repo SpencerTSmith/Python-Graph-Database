@@ -1,0 +1,6 @@
+2024-09-19 10:57:56,530 ERROR [Thread-25120] Operation: get_neighbors, Error: User input invalid command: 
+2024-09-19 10:58:09,782 INFO [Thread-25120] Operation: get_neighbors <class 'str'>, Result: {'D', 'B', 'C'} completed at 1726761489.782268
+2024-09-19 10:58:25,270 INFO [Thread-25120] Operation: get_all_vertices, Result: {'L', 'A', 'M', 'T', 'Q', 'H', 'O', 'R', 'J', 'K', 'E', 'N', 'D', 'S', 'B', 'P', 'I', 'F', 'C', 'G'} completed at 1726761505.2703104
+2024-09-19 10:58:38,942 INFO [Thread-25120] Operation: get_shortest_path A G, Result: ("['A', 'C', 'G'] in  0.000000 seconds completed at ", 1726761518.9424767)
+2024-09-19 10:58:48,742 INFO [Thread-25120] Operation: quit, Result: program attempting to exit
+2024-09-19 10:58:48,750 INFO [Thread-25120] Operation: quit, Result: program successfully exited

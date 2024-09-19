@@ -5,6 +5,7 @@ from src.utils.logging_utils import log_operation, log_result, log_error
 import os
 import networkx as nx
 import matplotlib.pyplot as plt
+import time
 
 def read_graph_from_file(filename: str) -> Graph:
     graph = Graph()
@@ -121,13 +122,13 @@ def main():
         
         
         if command.lower() == 'quit':
-            log_result("quit", "program attempting to exit")
+            log_result("quit", f"program attempting to exit {time.time()}")
             break
         
         execute_command(ops, command)
 
     print("Thank you for using the Graph Operations program!")
-    log_result("quit", "program successfully exited")
+    log_result("quit", f"program successfully exited {time.time()}")
 
 if __name__ == "__main__":
     main()
