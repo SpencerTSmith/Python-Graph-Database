@@ -67,6 +67,7 @@ class TestGraphOperations(unittest.TestCase):
         self.assertEqual(graph.get_all_vertices(), outputGraph.get_all_vertices())
         self.assertEqual(graph.has_edge("A", "B"), outputGraph.has_edge("A", "B"))
         self.assertEqual(graph.add_edge("A", "B"), outputGraph.add_edge("A", "B"))
+        self.assertEqual(graph.add_edge("A", "ABC"), outputGraph.add_edge("A", "ABC"))
         self.assertEqual(graphO.get_neighbors("A"), graphI.get_neighbors("A"))
         self.assertEqual(graph.remove_vertex('AB'), outputGraph.remove_vertex('AB'))
         self.assertEqual(graph.has_vertex('AB'), outputGraph.has_vertex('AB'))
