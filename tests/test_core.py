@@ -47,6 +47,7 @@ class TestGraphOperations(unittest.TestCase):
         outputGraph = read_graph_from_file(file_path)
         graphO = GraphOperations(graph)
         graphI = GraphOperations(outputGraph)
+        self.assertEqual(graphO.has_path(['A','B', 'F']), graphI.has_path(['A','B', 'F']))
         self.assertEqual(graph, outputGraph)
         graph.add_vertex('Test')
         outputGraph.add_vertex('Test')
@@ -70,9 +71,12 @@ class TestGraphOperations(unittest.TestCase):
         self.assertEqual(graph.add_edge("A", "ABC"), outputGraph.add_edge("A", "ABC"))
         self.assertEqual(graphO.get_neighbors("A"), graphI.get_neighbors("A"))
         self.assertEqual(graph.remove_vertex('AB'), outputGraph.remove_vertex('AB'))
+        self.assertEqual(graph.remove_edge('A', 'AB'), outputGraph.remove_edge('A', 'AB'))
         self.assertEqual(graph.has_vertex('AB'), outputGraph.has_vertex('AB'))
         path0, time = graphO.get_shortest_path('A', "G")
         path1, time1 = graphI.get_shortest_path("A", "G")
+        self.assertNotEqual(graph, graphO);
+
         self.assertEqual(path0, path1)
         graphI.remove_edge('A', 'B')
         graphI.remove_edge('A', 'C')
@@ -85,12 +89,16 @@ class TestGraphOperations(unittest.TestCase):
         graphI.add_edge('A', 'D')
         graphO.execute_commands("data/sample_commands.txt", "data/sample_output1.txt")
         graphI.execute_commands("data/sample_commands.txt", "data/sample_output2.txt")
-        self.maxDiff = None
         with open("data/sample_output1.txt", "r") as file1, open("data/sample_output2.txt", "r") as file2:
             output1 = file1.read()
             output2 = file2.read()
         self.assertNotEqual(output1, output2)
-
+        outputGraph.remove_vertex('A')
+        self.assertNotEqual(graph, outputGraph)
+        outputGraph.add_vertex('ABC')
+        self.assertNotEqual(graph, outputGraph)
+        graph.remove_vertex('B')
+        self.assertNotEqual(graph, outputGraph)
     def test_remove_edge(self):
 
         current_dir = os.path.dirname(os.path.abspath(__file__))
