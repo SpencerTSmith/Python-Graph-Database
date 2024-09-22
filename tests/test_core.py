@@ -69,6 +69,7 @@ class TestGraphOperations(unittest.TestCase):
         self.assertEqual(graph.add_edge("A", "B"), outputGraph.add_edge("A", "B"))
         self.assertEqual(graphO.get_neighbors("A"), graphI.get_neighbors("A"))
         self.assertEqual(graph.remove_vertex('AB'), outputGraph.remove_vertex('AB'))
+        self.assertEqual(graph.has_vertex('AB'), outputGraph.has_vertex('AB'))
         path0, time = graphO.get_shortest_path('A', "G")
         path1, time1 = graphI.get_shortest_path("A", "G")
         self.assertEqual(path0, path1)
