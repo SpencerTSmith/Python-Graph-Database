@@ -69,6 +69,15 @@ class TestGraphOperations(unittest.TestCase):
         path0, time = graphO.get_shortest_path('A', "G")
         path1, time1 = graphI.get_shortest_path("A", "G")
         self.assertEqual(path0, path1)
+        graphI.remove_edge('A', 'B')
+        graphI.remove_edge('A', 'C')
+        graphI.remove_edge('A', 'D')
+        path0, time = graphO.get_shortest_path('A', "G")
+        path1, time1 = graphI.get_shortest_path("A", "G")
+        self.assertNotEqual(path0, path1)
+        graphI.add_edge('A', 'B')
+        graphI.add_edge('A', 'C')
+        graphI.add_edge('A', 'D')
         graphO.execute_commands("data/sample_commands.txt", "data/sample_output1.txt")
         graphI.execute_commands("data/sample_commands.txt", "data/sample_output2.txt")
         self.maxDiff = None
@@ -76,6 +85,7 @@ class TestGraphOperations(unittest.TestCase):
             output1 = file1.read()
             output2 = file2.read()
         self.assertNotEqual(output1, output2)
+
     def test_remove_edge(self):
 
         current_dir = os.path.dirname(os.path.abspath(__file__))
