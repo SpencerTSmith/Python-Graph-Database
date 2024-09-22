@@ -1,5 +1,6 @@
 #use command python -m tests.test_core
 import unittest
+import data as data
 import src.algorithms.path_finding as path
 from src.core.graph import Graph
 from src.core.operations import GraphOperations
@@ -68,7 +69,13 @@ class TestGraphOperations(unittest.TestCase):
         path0, time = graphO.get_shortest_path('A', "G")
         path1, time1 = graphI.get_shortest_path("A", "G")
         self.assertEqual(path0, path1)
-
+        graphO.execute_commands("data/sample_commands.txt", "data/sample_output1.txt")
+        graphI.execute_commands("data/sample_commands.txt", "data/sample_output2.txt")
+        self.maxDiff = None
+        with open("data/sample_output1.txt", "r") as file1, open("data/sample_output2.txt", "r") as file2:
+            output1 = file1.read()
+            output2 = file2.read()
+        self.assertNotEqual(output1, output2)
     def test_remove_edge(self):
 
         current_dir = os.path.dirname(os.path.abspath(__file__))
