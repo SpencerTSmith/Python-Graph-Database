@@ -19,6 +19,9 @@ class GraphOperations:
     def __init__(self, graph: Graph):
         self._graph = graph
 
+    def add_external_vertex(self, vertex):
+        self._graph._external_vertices.add(vertex)
+
     def add_vertex(self, v: str) -> bool:
         return self._graph.add_vertex(v)
 
