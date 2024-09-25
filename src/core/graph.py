@@ -21,6 +21,20 @@ class Graph:
         self._external_vertices = set()
         self._lock = Lock()
 
+    def __eq__(self, other) ->bool:
+        if not isinstance(other, Graph):
+            return False
+
+        if len(self._vertices) != len(other._vertices):
+            return False
+
+        for vertex in self._vertices:
+            if vertex not in other._vertices:
+                return False
+            if self._vertices[vertex] != other._vertices[vertex]:
+                return False
+        return True
+
     def add_external_vertex(self, vertex):
         if not hasattr(self, '_external_vertices'): # checking if the Graph instance (self) has an attribute named '_external_vertices'
             self._external_vertices = set()
