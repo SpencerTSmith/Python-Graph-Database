@@ -4,7 +4,7 @@ from src.algorithms import path_finding
 from src.utils.time_tracking import TimeTracking
 from src.utils.logging_utils import log_operation, log_result, log_error
 
-from typing import Tuple, List, Optional
+from typing import Tuple, List, Optional, Set
 import time
 from enum import StrEnum
 from pprint import pprint
@@ -36,6 +36,9 @@ class GraphOperations:
         lamport_time=self.lamport_clock.get_lamport_times()
         self.lamport_clock._log_times("add vertex", start_time,end_time,lamport_time)
         return result
+
+    def add_external_vertex(self, vertex):
+        self._graph._external_vertices.add(vertex)
 
     def add_edge(self, v1: str, v2: str) -> bool:
         #log_result(f"add_edge {v1} -> {v2}", (f"{result} completed at {time.time()}"))
@@ -90,7 +93,6 @@ class GraphOperations:
         return result
 
     def has_path(self, vertices: List[str]) -> bool: 
-        start_time=time.time()
         log_operation("has path", vertices)
         for i in range(len(vertices) - 1):
             if not self.has_edge(vertices[i], vertices[i + 1]):
@@ -101,9 +103,7 @@ class GraphOperations:
         log_result(f"has_path {vertices}", (f"{result} completed at {time.time()}"))
         return result
 
-    def get_neighbors(self, v: str) -> Optional[List[str]]:
-        
-
+    def get_neighbors(self, v: str) -> Optional[Set[str]]:
         start_time=time.time()
         
         result = self._graph.get_neighbors(v)
@@ -142,12 +142,14 @@ class GraphOperations:
 
         log_operation("get_shortest_path", start, end)
         start_time = time.time()
-        graph_dict = {v: self._graph.get_neighbors(v) for v in self._graph.get_all_vertices()}
-        path= path_finding.bfs_shortest_path(graph_dict, start, end)
+        #graph_dict = {v: self._graph.get_neighbors(v) for v in self._graph.get_all_vertices()}
+        #path= path_finding.bfs_shortest_path(graph_dict, start, end)
 
         #future = self.executor.submit(path_finder)
         #path = future.result()
         
+        path = path_finding.parallel_shortest_path(self._graph._vertices, start, end)
+
         end_time = time.time()
         log_result(f"get_shortest_path {start} {end}", (f"{path} in {end_time - start_time: .6f} seconds completed at ", time.time()))
         
@@ -155,6 +157,15 @@ class GraphOperations:
         self.lamport_clock._log_times("get shortest path", start_time,end_time,lamport_time)
         return path, end_time -start_time
 
+    # Optional: Add a method for regular BFS for comparison
+    def get_shortest_path_bfs(self, start: str, end: str) -> Tuple[Optional[List[str]], float]:
+        start_time = time.time()
+
+        path = path_finding.bfs_shortest_path(self._graph._vertices, start, end)
+
+        end_time = time.time()
+        return path, end_time - start_time
+    
     # TODO(spencer): Needs nicer error checking and handling probably
     def execute_commands(self, command_file: str, output_file: str):
         start_time = time.time()

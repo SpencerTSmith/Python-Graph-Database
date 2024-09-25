@@ -32,4 +32,4 @@ def generate_large_graph_file(filename, num_vertices, num_edges):
     print(f"Graph file '{filename}' created with {num_vertices} vertices and {num_edges} edges.")
 
 # Usage
-generate_large_graph_file("large_graph.txt", 1000, 100000)
+generate_large_graph_file("4large_graph.txt", 1000, 100000)
